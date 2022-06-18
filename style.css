@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&display=swap');
 
 * {
     font-family: 'Roboto Mono', monospace;
     background-color: floralwhite;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-size: 18px;
 }
 
 header {
@@ -14,21 +19,25 @@ header {
 
 h1 {
     color: #804928;
-    font-size: 3.5em;
+    font-size: 3.5rem;
 }
 
 h2 {
     color: #804928;
-    font-size: 2em;
-    margin: 0.5em 1em;
+    font-size: 2.25rem;
+    padding: 0.5rem 1rem;
 }
 
 h3 {
     color: #a36633;
-    font-size: 1.25em;
-    margin: 0.5em;
+    font-size: 1.75rem;
+    padding: 0.5rem;
+    margin: 3rem 0 1rem 0;
 }
 
+strong{
+    color: #804928;
+}
 nav {
     display: inline-flex;
     justify-content: space-between;
@@ -57,13 +66,62 @@ nav li+li {
     right: 10px;
 }
 
+#headshot {
+    max-width: 250px;
+    width: 25%;
+    border-radius: 47% / 47%;
+    box-shadow: 0 0 0 4px #a36633;
+    margin-left: 2.5rem;
+}
+
 section {
-    margin: 5em auto;
-    padding: 0 5em;
-    max-width: 60em;
+    margin: 5rem auto;
+    padding: 0 5rem;
+    max-width: 60rem;
 }
 
 .information {
+    margin-bottom: 3rem;
     display: flex;
+    align-items: center;
+}
+
+#education li {
+    display: block;
+    padding-bottom: 20px;
+}
+
+li p {
+    color: #aca199;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+em {
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: bolder;
+    color: #804928;
+}
+
+#skills-list {
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr 1fr; 
+    color: #31180a;
+    font-size: 4rem;
+}
+
+.skill-name {
+    display: none;
+    width: 100px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+#skills-list div {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
     align-items: center;
 }
