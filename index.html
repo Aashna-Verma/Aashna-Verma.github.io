@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="style.css">
-    <script  src="script.js" defer></script>
+    <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js" defer></script>
+    <script type="text/javascript" src="script.js" defer></script>
     <title>Aashna Verma</title>
 </head>
 <body>
@@ -79,21 +80,34 @@
 
         <h3>Angel and Stitch</h3>
         <div class="information" >
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="https://github.com/Aashna-Verma/Angel-and-Stitch" target="_blank">See more</a>
+            </div>
             <img src="images/angel-stitch-icon.png" alt="">
         </div>
 
         <h3>Art Works</h3>
         <div id="art-works">
-            <img src="images/sunray-hand.png" alt="" width="200px">
-            <img src="images/fire.png" alt="" width="200px">
-            <img src="images/sunray.png" alt="" width="200px">
+            <img src="images/sunray-hand.png" alt="">
+            <img src="images/fire.png" alt="">
+            <img src="images/sunray.png" alt="">
         </div>
     </section>
 
     <section id="contact">
         <h2>CONTACT</h2>
-        <button>aashna.verma@outlook.com</button>
+        <form method="post" name="Form">
+
+            <input type="email" id="email" name="email" placeholder="sender123@gmail.com">
+            <br>
+            <input type="text" id="name" name="Name" placeholder="name">
+            <br>    
+            <textarea id="message" name="message" rows="3" cols="40" placeholder="message"></textarea>
+            <br>
+            <input type="button" value="Send Email" onclick="sendMail()">
+    
+        </form>
         <ul>
             <li><a href="https://www.linkedin.com/in/aashna-verma-000/" target="_blank"><i class="devicon-linkedin-plain"></i></a></i></li>
             <li><a href="https://github.com/Aashna-Verma/" target="_blank"><i class="devicon-github-plain"></i></a></i></li>

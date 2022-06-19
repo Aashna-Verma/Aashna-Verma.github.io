@@ -23,13 +23,13 @@ h1 {
 }
 
 h2 {
-    color: #804928;
+    color: #a84608;
     font-size: 2.25rem;
     padding: 0.5rem 1rem;
 }
 
 h3 {
-    color: #a36633;
+    color: #c78840;
     font-size: 1.75rem;
     padding: 0.5rem;
     margin: 3rem 0 1rem 0;
@@ -38,6 +38,12 @@ h3 {
 strong{
     color: #804928;
 }
+
+a{
+    text-decoration: none;
+    text-align: center;
+}
+
 nav {
     display: inline-flex;
     justify-content: space-between;
@@ -46,7 +52,6 @@ nav {
 }
 
 nav a{
-    text-decoration: none;
     color: #31180a;
     padding: 10px 30px;
     border-radius: 5px;
@@ -102,21 +107,27 @@ em {
     font-family: 'Advent Pro', sans-serif;
     font-weight: bolder;
     color: #804928;
+    letter-spacing: 2px;
 }
 
 #skills-list {
     display: grid;
     grid: 1fr 1fr / 1fr 1fr 1fr; 
-    color: #31180a;
+    color: #612705;
     font-size: 4rem;
 }
 
 .skill-name {
-    display: none;
-    width: 100px;
     text-align: center;
     margin-left: 10px;
+    font-size: 0; 
+    transition: font-size 300ms linear 100ms;
+}
+
+
+i:hover + .skill-name{
     font-size: 1rem;
+    
 }
 
 #skills-list div {
@@ -124,4 +135,43 @@ em {
     padding: 1rem;
     justify-content: center;
     align-items: center;
+}
+
+#projects img{
+    max-width: 300px;
+    width: 35%;
+    margin-left: 2rem;
+}
+
+.information div {
+    margin-top: 2rem;
+}
+
+
+.information a{
+    display: block;
+    justify-items: center;
+    width: 100px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    padding: 0.4rem 5rem;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #aca199;
+    border: 2px solid #d1c5bc;
+}
+
+.information a:hover {
+    background-color: #aca19936;
+}
+
+#art-works {
+    display: flex;
+    justify-content: space-between;
+}
+
+#art-works img {
+    width: 32%;
+    object-fit: cover;
+    margin: 0;
 }

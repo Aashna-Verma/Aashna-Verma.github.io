@@ -1,18 +1,36 @@
-let skillList = document.getElementById('skills-list');
-let skillName1 = document.getElementsByClassName("skill-name")[0];
-let skillName2 = document.getElementsByClassName("skill-name")[1];
-let skillName3 = document.getElementsByClassName("skill-name")[2];
-let skillName4 = document.getElementsByClassName("skill-name")[3];
-let skillName5 = document.getElementsByClassName("skill-name")[4];
-let skillName6 = document.getElementsByClassName("skill-name")[5];
+function sendMail() {
+	//getting values from input fields
 
-const lst = [skillName1, skillName2, skillName3, skillName4, skillName5, skillName6];
+	var email = Form.email.value;
 
+	var name = Form.name.value;
 
-skillList.onmouseover = function() {
-    lst.forEach(element => element.style.display = 'unset');
-}
+	var receiver = 'aashv.800@gmail.com';
 
-skillList.onmouseout = function() {
-    lst.forEach(element => element.style.display = 'none');
+	var message = Form.message.value;
+
+    console.log(email);
+    console.log(name);
+    console.log(receiver);
+    console.log(message);
+
+	//Sending email
+
+	Email.send({
+		Host: "smtp.gmail.com",
+
+		Username: name,
+
+        Password: "*******",
+
+		To: receiver,
+
+		From: email,
+
+		Subject: "Check Email Sending",
+
+		Body: message,
+	}).then(function (m) {
+		alert("Email sent successfully");
+	});
 }
