@@ -67,12 +67,6 @@ nav li+li {
     border-left: 2px solid #804928;
 }
 
-#mode {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-}
-
 #headshot {
     max-width: 250px;
     width: 25%;
@@ -194,16 +188,16 @@ article {
     justify-content: space-around;
 }
 
-#contact h2,
-article i {
-    color: #612705;
-}
-
 h4 {
     margin-top: 0.75rem;
     color: #7c3000;
     font-size: 1.25rem;
     padding: 20px 0;
+}
+
+#contact h2,
+article i {
+    color: #612705;
 }
 
 article div{
@@ -216,6 +210,14 @@ article ul {
 
 article i{
     font-size: 2em;
+}
+
+article li+li {
+    margin-left: 5rem;
+}
+
+article i:hover, h4:hover {
+    color: #b94a00;
 }
 
 form {
@@ -253,6 +255,16 @@ form button:hover {
 
     h2, h3, h4 {
         text-align: center;
+    }
+
+    nav li+li {
+        display: block;
+        border-color: transparent;
+        margin-top: 3rem;
+    }
+
+    header {
+        margin: 100px 0;
     }
 
     .information {
@@ -320,9 +332,13 @@ form button:hover {
         margin: 0;
     }
 
-    .information div, .information a {
+    .information div {
         margin: 0;
         max-width: 95%;
+    }
+
+    .information a {
+        margin: 2em auto;
     }
 
     h4 {
