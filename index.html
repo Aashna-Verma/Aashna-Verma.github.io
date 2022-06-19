@@ -95,24 +95,26 @@
         </div>
     </section>
 
-    <section id="contact">
-        <h2>CONTACT</h2>
-        <form method="post" name="Form">
-
-            <input type="email" id="email" name="email" placeholder="sender123@gmail.com">
-            <br>
-            <input type="text" id="name" name="Name" placeholder="name">
-            <br>    
-            <textarea id="message" name="message" rows="3" cols="40" placeholder="message"></textarea>
-            <br>
-            <input type="button" value="Send Email" onclick="sendMail()">
-    
-        </form>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/aashna-verma-000/" target="_blank"><i class="devicon-linkedin-plain"></i></a></i></li>
-            <li><a href="https://github.com/Aashna-Verma/" target="_blank"><i class="devicon-github-plain"></i></a></i></li>
-        </ul>
-    </section>
-        
+    <footer>
+        <section id="contact">
+            <h2>CONTACT</h2>
+                <article>
+                <div>
+                    <h4>aashna.verma@outlook.com</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/aashna-verma-000/" target="_blank"><i class="devicon-linkedin-plain"></i></a></i></li>
+                        <li><a href="https://github.com/Aashna-Verma/" target="_blank"><i class="devicon-github-plain"></i></a></i></li>
+                    </ul>
+                </div>
+                <form action="https://formsubmit.co/6fbb5434cf971b8c6abb6214a9321bf6" method="POST" name="Form">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" id="email" name="email" placeholder="sender123@gmail.com">
+                    <input type="text" id="name" name="Name" placeholder="name" required>   
+                    <textarea id="message" name="message" rows="3" cols="40" placeholder="message"></textarea>
+                    <button type="submit">Send Email</button>
+                </form>
+            </article>
+        </section> 
+    </footer>
 </body>
 </html>

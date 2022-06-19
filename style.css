@@ -3,13 +3,13 @@
 
 * {
     font-family: 'Roboto Mono', monospace;
-    background-color: floralwhite;
     margin: 0;
     padding: 0;
 }
 
 body {
     font-size: 18px;
+    background-color: floralwhite;
 }
 
 header {
@@ -174,4 +174,66 @@ i:hover + .skill-name{
     width: 32%;
     object-fit: cover;
     margin: 0;
+}
+
+footer {
+    background-color: #d1a078;
+    padding: 3em 0;
+}
+
+#contact {
+    margin: 0 auto;
+}
+
+article {
+    display:flex;
+    justify-content: space-around;
+}
+
+#contact h2,
+article i {
+    color: #612705;
+}
+
+h4 {
+    margin-top: 0.75rem;
+    color: #7c3000;
+    font-size: 1.25rem;
+    padding: 20px 0;
+}
+
+article ul {
+    text-align: center;
+}
+
+article i{
+    font-size: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+input,
+textarea,
+button {
+    color: #612705;
+    background-color: rgba(255, 250, 240, 0.664);
+    padding: 3px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid #804928;
+}
+
+form button {
+    margin: 0 auto;
+    background-color: #d1a078;
+    width: 30%;
+}
+
+form button:hover {
+    background-color: #bd906c;
 }
