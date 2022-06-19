@@ -8,6 +8,8 @@
 }
 
 body {
+    width: 100%;
+    height: 100%;
     font-size: 18px;
     background-color: floralwhite;
 }
@@ -90,6 +92,8 @@ section {
     display: flex;
     align-items: center;
 }
+
+
 
 #education li {
     display: block;
@@ -202,6 +206,10 @@ h4 {
     padding: 20px 0;
 }
 
+article div{
+    margin-right: 1em;
+}
+
 article ul {
     text-align: center;
 }
@@ -236,4 +244,88 @@ form button {
 
 form button:hover {
     background-color: #bd906c;
+}
+
+@media only screen and (max-width: 650px) {
+    body{
+        font-size: 16px;
+    }
+
+    h2, h3, h4 {
+        text-align: center;
+    }
+
+    .information {
+        flex-direction: column-reverse;
+    }
+
+    #headshot {
+        margin: 3rem;
+        min-width: 150px;
+    }
+
+    #skills-list div {
+        flex-direction: column;
+    }
+
+    #skills-list {
+        grid: 1fr 1fr 1fr/  1fr 1fr;
+    }
+
+    #skills-list p{
+        margin: 10px 0 0 0;
+        text-align: center;
+        width: 95px;
+        height: 17px;
+    }
+    
+    #projects img {
+        margin: 1rem;
+        min-width: 180px;
+    }
+
+    #art-works {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #art-works img {
+        all: unset;
+        width: 75%;
+        margin: 10px;
+    }
+
+    article {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    form {
+        width: 75%;
+    }
+
+}
+
+
+@media only screen and (max-width: 420px) {
+    section {
+        margin: 0 auto;
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    #projects .information {
+        margin: 0;
+    }
+
+    .information div, .information a {
+        margin: 0;
+        max-width: 95%;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
 }
