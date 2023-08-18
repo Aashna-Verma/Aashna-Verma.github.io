@@ -21,8 +21,8 @@
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     font-size: 18px;
     background-color: var(--beige);  
     overflow: hidden;
@@ -114,9 +114,43 @@ a:hover{
     h1 {font-size: 6em;}
     #about-me { font-size: 1.3em;}
     #screen {
-        width: auto;
-        height: auto;
         grid-template: 3fr 2fr / 1fr;
     }
     .graindient-large { top: 400px}
+  }
+
+  
+@media only screen and (max-width: 500px) {
+    *{ font-size: 14px;}
+    body{
+        margin: 0;
+        height: fit-content;
+    }
+
+    .body{
+        overflow: hidden;
+    }
+    h1 {font-size: 3.5em;}
+    section{ padding: 30px}
+
+    #screen {
+        height: fit-content;
+        margin: 30px;
+        grid-template: 1fr / 1fr;
+    }
+    .graindient-small { 
+        right: unset;
+        width: 500px;
+    }
+    .graindient-large { 
+        top: 350px;
+        left: -100px;
+        width: 700px;
+    }
+
+    ul {margin: 60px 10px;}
+
+    li img {
+        width: 40px;
+    }
   }
