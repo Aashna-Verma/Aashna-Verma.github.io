@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/icon.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js" defer></script>
@@ -58,10 +59,4 @@
         <feComposite operator="in" in2="SourceGraphic" result="monoNoise" />
         <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
     </filter>
-
-    <filter id='glowy'>
-        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_8_5" />
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_8_5" result="shape" />
-    </filter>
-
 </svg>
