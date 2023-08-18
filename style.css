@@ -102,3 +102,21 @@ li {
 a:hover{
     filter: brightness(150%) drop-shadow(0 0 1rem var(--lightGreen));
 }
+
+@media only screen and (max-width: 1200px) {
+    #about-me { font-size: 1.1em;}
+    .graindient-large { top: 350px}
+  }
+
+@media only screen and (max-width: 1000px) {
+    body{
+        overflow-y: scroll;}
+    h1 {font-size: 6em;}
+    #about-me { font-size: 1.3em;}
+    #screen {
+        width: auto;
+        height: auto;
+        grid-template: 3fr 2fr / 1fr;
+    }
+    .graindient-large { top: 400px}
+  }
