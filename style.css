@@ -1,345 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&display=swap');
+
+@font-face {
+    font-family: kyivType;
+    src: url(/assets/KyivType_Sans_Regular-.otf);
+}
+
+:root {
+    --beige: #E4D9CB;
+    --brown: #552910;
+    --lightGreen: #95e18f;
+    --medGreen: #91C190;
+    --neutralGrey: #333;
+  }
 
 * {
-    font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
+    color: var(--brown);
+    font-family: 'Bricolage Grotesque', sans-serif;
 }
 
 body {
     width: 100%;
     height: 100%;
     font-size: 18px;
-    background-color: floralwhite;
+    background-color: var(--beige);  
+    overflow: hidden;
 }
 
-header {
-    text-align: center;
-    margin: 300px auto;
+#screen {
+    margin: 50px;
+    height: 87vh;
+    display: grid;
+    grid-template: 1fr/ 3fr 2fr;
+    gap: 50px;
 }
 
-h1 {
-    color: #804928;
-    font-size: 3.5rem;
+.graindient{
+    filter: url(#grainy);
+    
 }
 
-h2 {
-    color: #a84608;
-    font-size: 2.25rem;
-    padding: 0.5rem 1rem;
+.graindient-large {
+    position: absolute;
+    width: 1300px;
 }
 
-h3 {
-    color: #c78840;
-    font-size: 1.75rem;
-    padding: 0.5rem;
-    margin: 3rem 0 1rem 0;
-}
-
-strong{
-    color: #804928;
-}
-
-a{
-    text-decoration: none;
-    text-align: center;
-}
-
-nav {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 60px;
-}
-
-nav a{
-    color: #31180a;
-    padding: 10px 30px;
-    border-radius: 5px;
-}
-
-li {
-    display: inline-block;
-}
-
-nav li+li {
-    border-left: 2px solid #804928;
-}
-
-#headshot {
-    max-width: 250px;
-    width: 25%;
-    border-radius: 47% / 47%;
-    box-shadow: 0 0 0 4px #a36633;
-    margin-left: 2.5rem;
+.graindient-small {
+    position: absolute;
+    width: 700px;
+    top: -100px;
+    right:0px;
 }
 
 section {
-    margin: 5rem auto;
-    padding: 0 5rem;
-    max-width: 60rem;
+    padding: 50px;
 }
 
-.information {
-    margin-bottom: 3rem;
+#card {
+    background: #ECE2D7;
+    box-shadow: 0px 4px 10px 0px rgba(85, 132, 121, 0.47);  
+}
+
+#card-content {
+    position: relative;
+}
+
+#about-me {
+    position: relative;
     display: flex;
     align-items: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
-#education li {
-    display: block;
-    padding-bottom: 20px;
-}
-
-li p {
-    color: #aca199;
-    font-size: 16px;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-em {
-    font-family: 'Advent Pro', sans-serif;
-    font-weight: bolder;
-    color: #804928;
-    letter-spacing: 2px;
-}
-
-#skills-list {
-    display: grid;
-    grid: 1fr 1fr / 1fr 1fr 1fr; 
-    color: #612705;
-    font-size: 4rem;
-}
-
-.skill-name {
-    text-align: center;
-    margin-left: 10px;
-    font-size: 0; 
-    transition: font-size 300ms linear 100ms;
-}
-
-
-i:hover + .skill-name{
-    font-size: 1rem;
-    
-}
-
-#skills-list div {
-    display: flex;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
-}
-
-#projects img{
-    max-width: 300px;
-    width: 35%;
-    margin-left: 2rem;
-}
-
-.information div {
-    margin-top: 2rem;
-}
-
-
-.information a{
-    display: block;
-    justify-items: center;
-    width: 100px;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    padding: 0.4rem 5rem;
-    border-radius: 10px;
-    font-size: 14px;
-    color: #aca199;
-    border: 2px solid #d1c5bc;
-}
-
-.information a:hover {
-    background-color: #aca19936;
-}
-
-#art-works {
-    display: flex;
-    justify-content: space-between;
-}
-
-#art-works img {
-    width: 32%;
-    object-fit: cover;
-    margin: 0;
-}
-
-footer {
-    background-color: #d1a078;
-    padding: 3em 0;
-}
-
-#contact {
-    margin: 0 auto;
-}
-
-article {
-    display:flex;
-    justify-content: space-around;
+h1 {
+    font-family: kyivType;
+    font-weight: 100;
+    letter-spacing: 10px;
+    font-size: 7rem;
 }
 
 h4 {
-    margin-top: 0.75rem;
-    color: #7c3000;
-    font-size: 1.25rem;
-    padding: 20px 0;
+    margin: 40px 0 0 20px;
+    font-size: 1.2em;
 }
 
-#contact h2,
-article i {
-    color: #612705;
+ul {
+    margin: 80px 50px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
 }
 
-article div{
-    margin-right: 1em;
-}
-
-article ul {
-    text-align: center;
-}
-
-article i{
-    font-size: 2em;
-}
-
-article li+li {
-    margin-left: 5rem;
-}
-
-article i:hover, h4:hover {
-    color: #b94a00;
-}
-
-form {
+li {
+    all: unset;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    width: 50%;
+    align-items: center;
 }
 
-input,
-textarea,
-button {
-    color: #612705;
-    background-color: rgba(255, 250, 240, 0.664);
-    padding: 3px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 2px solid #804928;
-}
-
-form button {
-    margin: 0 auto;
-    background-color: #d1a078;
-    width: 30%;
-}
-
-form button:hover {
-    background-color: #bd906c;
-}
-
-@media only screen and (max-width: 650px) {
-    body{
-        font-size: 16px;
-    }
-
-    h2, h3, h4 {
-        text-align: center;
-    }
-
-    nav li+li {
-        display: block;
-        border-color: transparent;
-        margin-top: 3rem;
-    }
-
-    header {
-        margin: 100px 0;
-    }
-
-    .information {
-        flex-direction: column-reverse;
-    }
-
-    #headshot {
-        margin: 3rem;
-        min-width: 150px;
-    }
-
-    #skills-list div {
-        flex-direction: column;
-    }
-
-    #skills-list {
-        grid: 1fr 1fr 1fr/  1fr 1fr;
-    }
-
-    #skills-list p{
-        margin: 10px 0 0 0;
-        text-align: center;
-        width: 95px;
-        height: 17px;
-    }
-    
-    #projects img {
-        margin: 1rem;
-        min-width: 180px;
-    }
-
-    #art-works {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #art-works img {
-        all: unset;
-        width: 75%;
-        margin: 10px;
-    }
-
-    article {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    form {
-        width: 75%;
-    }
-
-}
-
-
-@media only screen and (max-width: 420px) {
-    section {
-        margin: 0 auto;
-        padding: 1rem;
-        max-width: 100%;
-    }
-
-    #projects .information {
-        margin: 0;
-    }
-
-    .information div {
-        margin: 0;
-        max-width: 95%;
-    }
-
-    .information a {
-        margin: 2em auto;
-    }
-
-    h4 {
-        font-size: 1em;
-    }
+a:hover{
+    filter: brightness(150%) drop-shadow(0 0 1rem var(--lightGreen));
 }

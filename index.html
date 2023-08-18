@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,111 +11,57 @@
     <script type="text/javascript" src="script.js" defer></script>
     <title>Aashna Verma</title>
 </head>
+
 <body>
-    <header>
-        <h1>HI, I'M AASHNA!</h1>
-        <nav>
-            <ul>
-                <li><a href="#about-me">ABOUT ME</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT ME</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about-me">
-        <h2>ABOUT ME</h2>
-        <div class="information">
-            <p>Hi, I'm Aashna Verma! I am interested in software development and apps. I love learning about human-computer integrations and how different algorithms can elevate user experiences. I crave challenging problems, the satisfaction of an efficient solution is unbeatable! In my free time you can find me learning something new or drawing. I'd love to work together so feel free to contact me!</p>
-            <img src="images/headshot.jpg" alt="headshot" id="headshot">
-        </div>
-        <div id="education">
-            <h3>Education</h3>
-            <ul>
-                <li><strong>Carleton University</strong> - B.eng Software Engineering <em>Second Year</em> 
-                    <p>Computer programming, Data Management, Intro to Imperative programming</p>
-                </li>
-                <li><strong>Codecademy</strong> - Front-End Engineering course <em>compleated</em>
-                    <p>HTML, CSS, JavaScript, React, Node.js, Redux</p>
-                </li>
-                <li><strong>Longfields-Davidson Heights Secondary School</strong> <em>Class of 2021</em>
-                    <p>OCDSB silver medal (2018-2021), Technological education Ravens Pride Scholarship (2021), Visual Art award (2019), Milk bag Club, Relay for Life, FIRST Robotics, VEX Robotics, Tutoring</p>
-                </li>
-            </ul>
-        </div>
-        <div id="skills">
-            <h3>Skills</h3>
-            <div id="skills-list">
-                <div>
-                    <i class="devicon-html5-plain"></i>
-                    <p class="skill-name">HTML</p>
-                </div>
-                <div>
-                    <i class="devicon-javascript-plain"></i>
-                    <p class="skill-name">JavaScript</p>
-                </div>
-                <div>
-                    <i class="devicon-css3-plain"></i>
-                    <p class="skill-name">CSS</p>
-                </div>
-                
-                <div>
-                    <i class="devicon-python-plain"></i>
-                    <p class="skill-name">Python</p>
-                </div>
-                <div>
-                    <i class="devicon-java-plain"></i>
-                    <p class="skill-name">Java</p>
-                </div>
-                <div>
-                    <i class="devicon-git-plain"></i>
-                    <p class="skill-name">Git</p>
-                </div>
+
+        <img class="graindient graindient-small" src="assets/graindient_small.svg" />
+        <img class="graindient graindient-large" src="assets/graindient.svg" />
+
+    <div id="screen">
+        <section id="card">
+            <div id="card-content">
+                <h1>Aashna<br />Verma</h1>
+                <h4 id="myEmail" onclick="copyEmail('myEmail')">aashna.verma@outlook.com</h4>
+                <ul>
+                    <li><a href="https://github.com/Aashna-Verma/" target="_blank">
+                        <img src="assets/icons/git.svg"/></a></i></li>
+                    <li><a href="assets/Aashna Resume short centre.pdf" download>
+                        <img src="assets/icons/download.svg"/></a></i></li></a></li>
+                    <li><a href="https://www.linkedin.com/in/aashna-verma-000" target="_blank">
+                        <img src="assets/icons/linkedin.svg"/></a></i></li>
+                </ul>
+                <p>this website is underconstruction, meanwhile check out my socials!</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects">
-        <h2>PROJECTS</h2>
 
-        <h3>Angel and Stitch</h3>
-        <div class="information" >
-            <div>
-                <p>A collision game made using Python and Pygame. There are two characters on diffrent path that are controlled by the same controls. The goal is to make it to the end of the path in a given amount of time.
-                </p>
-                <a href="https://github.com/Aashna-Verma/Angel-and-Stitch" target="_blank">See more</a>
+        <section id="about-me">
+            <div class="information">
+                <p>Hi, I'm Aashna Verma! I am interested in software development and apps. I love learning about
+                    human-computer integrations and how different algorithms can elevate user experiences. I crave
+                    challenging problems, the satisfaction of an efficient solution is unbeatable! In my free time you
+                    can
+                    find me learning something new or drawing. I'd love to work together so feel free to contact me!</p>
             </div>
-            <img src="images/angel-stitch-icon.png" alt="">
-        </div>
-
-        <h3>Art Works</h3>
-        <div id="art-works">
-            <img src="images/sunray-hand.png" alt="">
-            <img src="images/fire.png" alt="">
-            <img src="images/sunray.png" alt="">
-        </div>
-    </section>
-
-    <footer>
-        <section id="contact">
-            <h2>CONTACT</h2>
-                <article>
-                <div>
-                    <h4 id="myEmail" onclick="copyEmail('myEmail')">aashna.verma@outlook.com</h4>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/aashna-verma-000/" target="_blank"><i class="devicon-linkedin-plain"></i></a></i></li>
-                        <li><a href="https://github.com/Aashna-Verma/" target="_blank"><i class="devicon-github-plain"></i></a></i></li>
-                    </ul>
-                </div>
-                <form action="https://formsubmit.co/6fbb5434cf971b8c6abb6214a9321bf6" method="POST" name="Form">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="text" id="email" name="email" placeholder="sender123@gmail.com">
-                    <input type="text" id="name" name="Name" placeholder="name" required>   
-                    <textarea id="message" name="message" rows="3" cols="40" placeholder="message"></textarea>
-                    <button type="submit">Send Email</button>
-                </form>
-            </article>
-        </section> 
-    </footer>
+        </section>
+    </div>
 </body>
+
 </html>
+
+
+
+<svg>
+    <filter id='grainy'>
+        <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
+        <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+        <feComposite operator="in" in2="SourceGraphic" result="monoNoise" />
+        <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+    </filter>
+
+    <filter id='glowy'>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_8_5" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_8_5" result="shape" />
+    </filter>
+
+</svg>
