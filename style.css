@@ -103,6 +103,12 @@ a:hover{
     filter: brightness(150%) drop-shadow(0 0 1rem var(--lightGreen));
 }
 
+.qr-code {
+    all: unset;
+    width: 0px;
+    visibility: hidden;
+}
+
 @media only screen and (max-width: 1200px) {
     #about-me { font-size: 1.1em;}
     .graindient-large { top: 350px}
@@ -115,8 +121,13 @@ a:hover{
     #about-me { font-size: 1.3em;}
     #screen {
         grid-template: 3fr 2fr / 1fr;
+        gap: 10px;
     }
     .graindient-large { top: 400px}
+
+    svg{
+        width: 0px;
+    }
   }
 
   
@@ -127,17 +138,21 @@ a:hover{
         height: fit-content;
     }
 
-    .body{
-        overflow: hidden;
-    }
     h1 {font-size: 3.5em;}
     section{ padding: 30px}
 
     #screen {
         height: fit-content;
         margin: 30px;
-        grid-template: 1fr / 1fr;
+        grid-template: 1fr 1fr 0.25fr/ 1fr;
     }
+
+    .qr-code{
+        margin: auto;
+        visibility: visible;
+        width: 150px;
+    }
+
     .graindient-small { 
         right: unset;
         width: 500px;
