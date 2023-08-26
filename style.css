@@ -9,9 +9,7 @@
     --beige: #E4D9CB;
     --brown: #552910;
     --lightGreen: #95e18f;
-    --medGreen: #91C190;
-    --neutralGrey: #333;
-  }
+}
 
 * {
     margin: 0;
@@ -82,8 +80,10 @@ h1 {
 }
 
 h4 {
-    margin: 40px 0 0 20px;
+    margin: 40px auto auto 20px;
+    margin-inline-end: 30px;
     font-size: 1.2em;
+    cursor: pointer;
 }
 
 ul {
@@ -102,6 +102,63 @@ li {
 a:hover{
     filter: brightness(150%) drop-shadow(0 0 1rem var(--lightGreen));
 }
+
+.cursor{
+    position: absolute;
+    background: var(--brown);
+    width: 20px;
+    height: 20px;
+    opacity: 0%;
+    border-radius: 50%;
+    z-index: 100;
+    transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    transform: scale(0.8);
+}
+
+.cursor.active {
+    opacity: 50%;
+    background-color: var(--brown);
+    transform: scale(2.5);
+    transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+}
+
+.svg-prac {
+    width: 50px;
+    position: absolute;
+    pointer-events: none;
+    z-index: 101;
+    animation: rotation 20s infinite linear;
+    transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) scale, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    opacity: 0%;
+}
+
+.svg-prac.active {
+    opacity: 100%;
+    transition: 1s cubic-bezier(0.75, -1.27, 0.3, 2.33) scale, 1s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    scale: 2;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(359deg);
+    }
+}
+
+text {
+    font-size: 4.5em;
+    font-weight: bold;
+    letter-spacing: 0.25em;
+    fill: var(--brown);
+    text-shadow: 1px 1px 0 var(--beige),
+    -1px 1px 0 var(--beige),
+    1px -1px 0 var(--beige),
+    -1px -1px 0 var(--beige);
+}
+
 
 .qr-code {
     all: unset;
@@ -130,7 +187,6 @@ a:hover{
     }
   }
 
-  
 @media only screen and (max-width: 500px) {
     *{ font-size: 14px;}
     body{

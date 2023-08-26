@@ -9,27 +9,46 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script type="text/javascript" src="script.js" defer></script>
     <title>Aashna Verma</title>
 </head>
 
 <body>
-<div class="body">
-        <img class="graindient graindient-small" src="assets/graindient_small.svg" />
-        <img class="graindient graindient-large" src="assets/graindient.svg" />
+    
+    <svg class="svg-prac" xmlns="http://www.w3.org/2000/svg" xml:lang="en"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+        <title>Circular Text Path</title>
+        <defs>
+            <path id="textcircle"
+                d="M250,400
+                    a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
+                transform="rotate(12,250,250)"/>
+        </defs>
+        <rect  fill="none" />
+        <text>
+            <textPath xlink:href="#textcircle"
+                    aria-label="All for One &amp; One for All"
+                    ><textPath>
+        </text>
+    <div class="cursor"></div>
+    </svg>
+
+    <img class="graindient graindient-small" src="assets/graindient_small.svg" />
+    <img class="graindient graindient-large" src="assets/graindient.svg" />
 
     <div id="screen">
         <section id="card">
             <div id="card-content">
                 <h1>Aashna<br />Verma</h1>
-                <h4 id="myEmail" onclick="copyEmail('myEmail')">aashna.verma@outlook.com</h4>
+                <h4 class="fancy-selector" id="myEmail" name="COPY" onclick="copyEmail('myEmail')">aashna.verma@outlook.com</h4>
                 <ul>
                     <li><a href="https://github.com/Aashna-Verma/" target="_blank">
-                        <img src="assets/icons/git.svg"/></a></i></li>
+                            <img class="fancy-selector" src="assets/icons/git.svg" name="GITHUB"/></a></i></li>
                     <li><a href="assets/Aashna Resume short centre.pdf" download>
-                        <img src="assets/icons/download.svg"/></a></i></li></a></li>
+                            <img class="fancy-selector" src="assets/icons/download.svg" name="RESUME" /></a></i></li></a></li>
                     <li><a href="https://www.linkedin.com/in/aashna-verma-000" target="_blank">
-                        <img src="assets/icons/linkedin.svg"/></a></i></li>
+                            <img class="fancy-selector" src="assets/icons/linkedin.svg" name="LINKEDIN" /></a></i></li>
                 </ul>
                 <p>this website is underconstruction, meanwhile check out my socials!</p>
             </div>
@@ -40,14 +59,17 @@
             <div class="information">
                 <p>Hi, I'm Aashna Verma! I am interested in software development and apps. I love learning about
                     human-computer integrations and how different algorithms can elevate user experiences. I crave
-                    challenging problems, the satisfaction of an efficient solution is unbeatable! In my free time you
+                    challenging problems, the satisfaction of an efficient solution is unbeatable! In my free time
+                    you
                     can
-                    find me learning something new or drawing. I'd love to work together so feel free to contact me!</p>
+                    find me learning something new or drawing. I'd love to work together so feel free to contact me!
+                </p>
             </div>
         </section>
         <img class="qr-code" src="assets/qr_code.svg" />
     </div>
-</div>
+    
+
 </body>
 
 </html>
