@@ -99,7 +99,7 @@ li {
     align-items: center;
 }
 
-a:hover{
+a:hover, h4:hover{
     filter: brightness(150%) drop-shadow(0 0 1rem var(--lightGreen));
 }
 
