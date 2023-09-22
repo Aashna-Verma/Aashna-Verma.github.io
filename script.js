@@ -7,7 +7,7 @@ function copyEmail(id) {
 }
 
 //-----------------------ROTATING CURSOR---------------------------//
-const follower = document.querySelector(".svg-prac");
+const follower = document.querySelector(".svg-circle");
 
 //-------------------CURSOR-----------------//
 
