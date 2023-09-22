@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: kyivType;
-    src: url(/assets/KyivType_Sans_Regular-.otf);
+    src: url(/assets/KyivType_Sans_Bold-.otf);
 }
 
 :root {
@@ -74,20 +74,19 @@ section {
 
 h1 {
     font-family: kyivType;
-    font-weight: 100;
-    letter-spacing: 10px;
-    font-size: 7rem;
+    letter-spacing: 0.1em;
+    line-height: 9.5rem;
+    font-size: 9rem;
 }
 
 h4 {
-    margin: 40px auto auto 20px;
-    margin-inline-end: 30px;
+    margin: 40px 0 0 20px;
     font-size: 1.2em;
     cursor: pointer;
 }
 
 ul {
-    margin: 80px 50px;
+    margin: 70px 50px;
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr;
 }
@@ -99,6 +98,10 @@ li {
     align-items: center;
 }
 
+
+li img {
+    width: 3.5em;
+}
 a:hover, h4:hover{
     filter: brightness(150%) drop-shadow(0 0 1rem var(--lightGreen));
 }
@@ -166,15 +169,22 @@ text {
     visibility: hidden;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
+    h1 {
+        line-height: 8rem;
+        font-size: 8rem;
+    }
     #about-me { font-size: 1.1em;}
     .graindient-large { top: 350px}
   }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1050px) {
     body{
         overflow-y: scroll;}
-    h1 {font-size: 6em;}
+    h1 {
+        line-height: 7rem;
+        font-size: 7em;
+    }
     #about-me { font-size: 1.3em;}
     #screen {
         grid-template: 3fr 2fr / 1fr;
@@ -187,6 +197,20 @@ text {
     }
   }
 
+  @media only screen and (max-width: 750px) {
+    body{
+        overflow-y: scroll;}
+    h1 {
+        line-height: 5.5rem;
+        font-size: 5.5em;
+    }
+
+    li img {
+        width: 3em;
+    }
+
+  }
+
 @media only screen and (max-width: 500px) {
     *{ font-size: 14px;}
     body{
@@ -194,8 +218,15 @@ text {
         height: fit-content;
     }
 
-    h1 {font-size: 3.5em;}
-    section{ padding: 30px}
+    h1 {
+        font-size: 4.5em;
+        letter-spacing: 0.05em;
+    }
+
+    .website-details{
+        text-align: center;
+    }
+    section{ padding: 25px}
 
     #screen {
         height: fit-content;
