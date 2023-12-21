@@ -1,6 +1,6 @@
-# Aashna-Verma.github.io
-My Portfolio website!
-
-Please accsess my website [Here](https://aashna-verma.github.io/)
-
-This is my first website and is still in the works! It uses basic webdev topics such as Responsiveness and simple design.
+# hello!
+Hiiiii!!! I'm aashna, a software eng student at carleton!  
+<br>
+I've been working on my personal website and trying out different tech!  
+<br>
+React | Gsap | Lenis
