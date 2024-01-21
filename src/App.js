@@ -1,20 +1,24 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import React, { useEffect, useState, Suspense } from "react";
 import Nav from './components/Nav';
 import Home from './pages/Home';
 import Art from './pages/Art';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Inspiration from './pages/Inspiration';
-import { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function App() {
+
 	useEffect(() => {
-		const lenis = new Lenis(
-			{
+		window.onresize = function(){ window.location.reload();}
+	}, [])
+
+	useEffect(() => {
+		const lenis = new Lenis({
 				duration: 1.2,
 				easing: function (t) { return (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)); },
 				direction: "vertical",
@@ -22,8 +26,7 @@ function App() {
 				smooth: false,
 				smoothTouch: false,
 				touchMultiplier: 2,
-			}
-		);
+		});
 
 		lenis.on('scroll', ScrollTrigger.update);
 

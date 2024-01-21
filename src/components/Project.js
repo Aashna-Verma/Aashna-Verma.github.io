@@ -3,14 +3,13 @@ import { useEffect } from 'react';
 import { gsap } from 'gsap';
 
 
-function Project({img, title}) {
-
-    useEffect(() => { });
-
+function Project({img, title}) {     
     return (
-        <div className='project'>
-            <img className='project-image' src={img} />
-            <div className='project-title'>{title}</div>
+        <div className='clipy'>
+            <div className='project upsie project-popup'>
+                <img className='project-image' src={img} />
+                <div className='project-title'>{title}</div>
+            </div>
         </div>
     );
 }

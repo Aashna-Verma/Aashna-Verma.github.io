@@ -45,7 +45,7 @@ function Nav() {
             }, {
                 width: "0%",
                 left: "100%",
-                duration: 1,
+                duration: 0.25,
                 immediateRender: false
             });
 

@@ -5,6 +5,7 @@
 	--beige: #e7e0d8;
 	--dark-brown: #3D1A06;
 	--med-brown: #602E12;
+	--med-gray: #877C7D;
 }
 
 * {
@@ -44,11 +45,12 @@ body {
 }
 
 .clipy {
+	/*overflow: hidden;*/
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .upsie {
-    transform: translateY(4em);
+    transform: translateY(100%);
     transition: transform .5s;
 }
 
