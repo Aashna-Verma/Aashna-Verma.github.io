@@ -81,14 +81,12 @@ h1 {
     font-size: 9rem;
 }
 
-h4 {
+#myEmail {
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 600;
     margin: 40px 0 0 20px;
     font-size: 1.2em;
     cursor: pointer;
-}
-
-#myEmail {
-    font-family: 'Advent Pro', sans-serif;
 }
 
 ul {
@@ -109,7 +107,7 @@ li img {
     width: 3.5em;
 }
 
-a:hover, h4:hover{
+a:hover, #myEmail:hover{
     filter: brightness(150%) drop-shadow(0 0 1rem var(--lightGreen));
 }
 
