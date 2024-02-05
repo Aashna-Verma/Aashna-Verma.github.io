@@ -1,0 +1,41 @@
+.project {
+	align-items: flex-start;
+	display: flex;
+	margin-bottom: 3em;
+
+	.project-image {
+		width: calc(100vw / 2.3);
+		height: calc(100vw / 2);
+	}
+
+	.project-info {
+		margin: 3em 0em 3em 5em;
+		position: sticky;
+		top: calc(100vh / 3);
+
+		.project-title {
+			font-size: 5em;
+			font-weight: 700;
+		}
+
+		.project-tag {
+			display: inline-flex;
+			align-items: center;
+			border: 2px solid var(--med-brown);
+			margin: 0.5em;
+			padding: 0.25em 0.75em;
+			border-radius: 30px;
+
+			span {
+				padding-top: 0.2em;
+			}
+		}
+
+		.arrow img {
+				opacity: 0;
+				width: 0rem;
+				height: 0rem;
+			}
+		
+	}
+}

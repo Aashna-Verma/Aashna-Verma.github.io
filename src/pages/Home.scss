@@ -1,136 +1,76 @@
-/**************** home intro ****************/
-#home-intro {
-    height: calc(100vh - 5em);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    .block {
-        position: absolute;
-        z-index: 20;
-        top: 0;
-        left:0;
-        width: 100%;
-        height: 100%;
-        background: var(--beige);
-    }
+h2 {
+	text-transform: uppercase;
 }
-
-.intro-name {
-    font-size: 9em;
-    font-weight: 1000;
-    line-height: 1em;
-}
-
-#intro-role {
-    font-size: 1.5em;
-}
-
-#home-intro > div{
-    position: relative;
-    margin: 0 25em 0 0;
-}
-
-#intro-words {
-    position: relative;
-    z-index: 5;
-}
-
-.intro-circle {
-    position: absolute;
-    top: -8.75em;
-    right: -27em;
-    
-    width: 600px;
-    height: 600px;
-    height: auto;
-
-    img {
-        z-index: 4;
-        position: absolute;
-        height: 600px;
-        object-fit: fill;
-        filter: hue-rotate(355deg) ;
-    }
-}
-
-.circle {
-    position: absolute;
-    top: 0;
-    z-index: 3;
-    width: 600px;
-    height: 600px;
-    //background: linear-gradient(130deg, transparent, var(--light-beige));
-    background: var(--light-beige);
-    border-radius: 50%; 
-}
-
-.char {
-    color: var(--med-brown);
-    transform: translateY(150px);
-    transition: transform .5s;
-}
-
-#intro-role .word {
-    transform: translateY(60px);
-    transition: transform .5s;
-}
-
 
 /**************** header ****************/
 
 .home-header {
-    transition: transform .5s;
-    display: flex;
-    margin: 5em 1em 2em 1em;
-    gap: 5em;
-}
+	transition: transform 0.5s;
+	display: flex;
+	margin: 5em 1em 2em 1em;
+	gap: 5em;
 
-.home-header > h2 {
-    margin: 0;
-    line-height: 1em;
-    font-size: 2em;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--med-brown);
+	> h2 {
+		margin: 0;
+		line-height: 1em;
+		font-size: 3.5em;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: var(--med-brown);
+	}
 }
 
 /**************** home about ****************/
 
 #home-about {
-    padding: 0 5em;
+	padding: 0 5em;
 }
 
 .about-p {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.about-skills li{
-    font-size: 1.5em;
-    font-weight: 600;
-    list-style-type: none;
-    padding: unset;
-    
-
-    div {
-        color: var(--med-gray);
-    }
+	font-size: 2.25em;
+	text-transform: uppercase;
+	font-weight: 600;
 }
 
 .space {
-    height: 100px;
-    margin: 20em;
+	height: 100px;
+	margin: 20em;
 }
 
 .home-section {
-    margin: 2em 3em;
+	margin: 2em 3em;
 }
 
 .column-2 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    margin-top: 3em;
+	display: grid;
+	padding: 0 10em;
+	gap: 2em;
+	grid-template-columns: 1.5fr 1fr;
+	color: var(--med-gray);
+
+	.title {
+		font-size: 1.75em;
+		margin-left: 2.5em;
+		margin-bottom: 0.25em;
+	}
+
+	.normal-text {
+		font-size: 1.2em;
+	}
+
+	.about-skills {
+		margin-top: 2em;
+
+		li {
+			text-transform: uppercase;
+			font-size: 1.75em;
+			font-weight: 600;
+			list-style-type: none;
+			padding: unset;
+
+			div {
+				color: var(--med-gray);
+			}
+		}
+	}
 }

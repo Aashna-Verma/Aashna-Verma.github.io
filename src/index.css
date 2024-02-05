@@ -10,14 +10,13 @@
 
 * {
 	font-family: 'Kufam', sans-serif;
-	color: var(--dark-brown);
 }
 
 body {
 	margin: 0;
 	margin-top: 3.75em;
 	background-color: var(--beige);
-	
+	color: var(--dark-brown);
 }
 
 /* width */
@@ -56,4 +55,8 @@ body {
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+	all: unset;
 }
