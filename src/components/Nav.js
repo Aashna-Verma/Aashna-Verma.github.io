@@ -1,7 +1,8 @@
-import './Nav.css';
+import './Nav.scss';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
+import favicon from '../assets/favicon.svg';
 
 function Nav() {
 
@@ -64,7 +65,7 @@ function Nav() {
 
     return (
         <div id='Nav'>
-            <span className='nav-link nav-name'><Link to='/'>Aashna Verma</Link></span>
+            <span className='nav-link '><Link className='nav-name' to='/'><img src={favicon}/>Aashna Verma</Link></span>
             <span id='nav-tabs'>
                 <span className='nav-link'>
                     <Link to='/art'>./art </Link>
