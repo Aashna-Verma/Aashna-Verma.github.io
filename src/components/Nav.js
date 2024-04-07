@@ -65,8 +65,13 @@ function Nav() {
 
     return (
         <div id='Nav'>
-            <span className='nav-link '><Link className='nav-name' to='/'><img src={favicon}/>Aashna Verma</Link></span>
-            <span id='nav-tabs'>
+            <div className='nav-left'>
+                <Link className='nav-name' to='/'>
+                    <img src={favicon} />Aashna Verma
+                </Link>
+            </div>
+
+            <div className='nav-right'>
                 <span className='nav-link'>
                     <Link to='/art'>./art </Link>
                     <span className='underline'></span>
@@ -83,7 +88,7 @@ function Nav() {
                     <Link to='/inspiration'>./inspiration </Link>
                     <span className='underline'></span>
                 </span>
-            </span>
+            </div>
         </div>
     );
 }
