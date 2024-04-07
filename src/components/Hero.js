@@ -40,7 +40,6 @@ export default function Hero({ className }) {
             duration: 1,
             borderRadius: '50%',
           });
-
     });
 
     return (

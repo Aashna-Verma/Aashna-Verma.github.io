@@ -2,7 +2,6 @@ import './Home.scss';
 import Project from '../components/Project';
 import Hero from '../components/Hero';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from 'react';
 import SplitType from 'split-type';
 import img from '../assets/projects/fireRacoon.png';
@@ -26,8 +25,6 @@ function Home() {
 
 			var upsies = document.querySelectorAll('.upsie');
 			var popup = document.querySelectorAll('.project-popup');
-
-			gsap.registerPlugin(ScrollTrigger);
 
 			upsies.forEach(upsie => {
 				gsap.timeline({
