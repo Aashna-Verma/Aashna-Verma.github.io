@@ -2,7 +2,6 @@ import './Hero.scss';
 import { useEffect } from 'react';
 import SplitType from 'split-type';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import sparkle from '../assets/sparkle.svg';
 
 export default function Hero({ className }) {
@@ -25,8 +24,6 @@ export default function Hero({ className }) {
             ease: 'elastic.out(1,0.4)'
         });
 
-        gsap.registerPlugin(ScrollTrigger);
-
         gsap.to('#gradient', {
             scrollTrigger: {
               trigger: '#home-intro',
@@ -37,7 +34,6 @@ export default function Hero({ className }) {
             },
             width: '85vh', 
             height: '85vh', 
-            duration: 1,
             borderRadius: '50%',
           });
     });

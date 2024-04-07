@@ -34,14 +34,14 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: var(--med-brown);
+	background: #443E73;
 	border: .1em solid var(--surface-primary);
 	border-radius: 100vw;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--dark-brown);
+	background: #474b96;
 }
 
 .clipy {

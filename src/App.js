@@ -14,6 +14,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function App() {
 
+	
+
 	useEffect(() => {
 		window.onresize = function(){ window.location.reload();}
 	}, [])
