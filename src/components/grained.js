@@ -38,10 +38,10 @@
             animate: true,
             patternWidth: 300,
             patternHeight: 300,
-            grainOpacity: 0.1,
+            grainOpacity: 1,
             grainDensity: 1,
-            grainWidth: 0.75,
-            grainHeight: 0.75,
+            grainWidth: 1,
+            grainHeight: 1,
             grainChaos: 0.5,
             grainSpeed: 20
 
@@ -59,7 +59,19 @@
             canvas.height = options.patternHeight;
             for (var w = 0; w < options.patternWidth; w += options.grainDensity) {
                 for (var h = 0; h < options.patternHeight; h += options.grainDensity) {
-                    var opacity = Math.random() * options.grainOpacity;
+                    var rawOpacity = Math.random();
+                    var opacity;
+
+                    // Directly implementing the 1:10 transparent to >0.75 opacity ratio
+                    if (rawOpacity < 0.3) { // Approximately 9% chance
+                        // This range is for less opaque to transparent grains
+                        opacity = rawOpacity * 2; // Ensures opacity is below 0.75
+                    } else {
+                        // This range ensures opacity is always above 0.75
+                        opacity = 0.6 + (rawOpacity * 0.4); // Adjusting to make sure opacity is between 0.75 and 1
+                    }
+
+                    opacity *= options.grainOpacity;
                     ctx.fillStyle = 'rgba(' + [0, 0, 0, opacity].join() + ')';
                     ctx.fillRect(w, h, options.grainWidth, options.grainHeight);
                 }
@@ -130,7 +142,7 @@
                 rule += prefixes[pre] + 'animation-name:grained;';
                 rule += prefixes[pre] + 'animation-iteration-count: infinite;';
                 rule += prefixes[pre] + 'animation-duration: ' + options.grainChaos + 's;';
-                rule += prefixes[pre] + 'animation-timing-function: steps(' +options.grainSpeed + ', end);';
+                rule += prefixes[pre] + 'animation-timing-function: steps(' + options.grainSpeed + ', end);';
             }
         }
 
