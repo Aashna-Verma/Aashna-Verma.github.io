@@ -10,7 +10,6 @@ import img from '../assets/projects/fireRacoon.png';
 function Home() {
 
 	useEffect(() => {
-		//window.scrollTo(0, 0);
 		console.log('mounted');
 		gsap.to('.block', {
 			opacity: 0,
