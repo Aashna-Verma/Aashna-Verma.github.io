@@ -32,7 +32,7 @@ function Home() {
 						start: 'top bottom',
 						end: '+=100 bottom',
 						scrub: true,
-						markers: true
+						markers: false
 					}
 				}).to(upsie, {
 					y: 0
@@ -95,8 +95,6 @@ function Home() {
 				{header('./01', 'About', 'I\'m a Software Engineering student @ CARLETON UNIVERSITY. Merging creativity with technology to create functional and aesthetic systems.')}
 				{column2('Skills', 'Shaped by my academic personal passions. This is a small peek into my continuous learning journey.', ['FullStack', 'UI/UX Design', 'Web Dev', 'Graphic Design'])}
 				{column2('Technologies', 'Over time, I\'ve cultivated this skill set, shaped by my academic pursuits at university and my personal passions. This is a small peek into my continuous learning journey.', ['JS/HTML/CSS', 'ReactJS', 'Blazor', 'Python', 'Java', 'Figma'])}
-
-
 			</div>
 
 			<div className='home-section' id='home-projects'>

@@ -32,13 +32,19 @@
 }
 /**************** home about ****************/
 
+#home-about {
+	background-color: var(--surface-blur);
+    backdrop-filter:blur(50px);
+}
+
 .space {
 	height: 100px;
 	margin: 20em;
 }
 
 .home-section {
-	margin: 2em 3em;
+	margin: 2em 0;
+	padding: 0 3em;
 }
 
 .column-2 {

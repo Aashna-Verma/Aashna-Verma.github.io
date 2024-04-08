@@ -2,6 +2,7 @@
 :root {
 	--text-primary: #fff;
 	--surface-primary: #221611;
+	--surface-blur: rgb(34, 22, 17, 0.001);
 	--beige: #e7e0d8;
 	--dark-brown: #3D1A06;
 	--med-brown: #602E12;

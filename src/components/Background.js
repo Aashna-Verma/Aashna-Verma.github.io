@@ -8,7 +8,8 @@ export default function Background() {
     useEffect(() => {
         window.grained('#background', {
             "animate": false,
-            "grainOpacity": 0.7
+            "grainOpacity": 0.7,
+            "grainSpeed": 1
         }); 
     });
 

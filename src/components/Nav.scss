@@ -10,8 +10,8 @@
 
 .nav-left,
 .nav-right{
-    background-color: rgb(34, 22, 17, 0.001);
-    backdrop-filter:blur(10px) ;
+    background-color: var(--surface-blur);
+    backdrop-filter:blur(10px);
     height: 100%;
 
     display: flex;
