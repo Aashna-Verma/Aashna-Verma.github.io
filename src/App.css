@@ -25,13 +25,11 @@ body {
 ::-webkit-scrollbar {
 	background-color: #0F0A08;
 	width: 0.75em;
-	background-color: none;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-	
-	border-radius: 100vw;
+	border-radius: 10px;
 	margin-block: 0.5em;
 }
 

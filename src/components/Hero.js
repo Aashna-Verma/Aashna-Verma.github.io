@@ -27,7 +27,7 @@ export default function Hero({ className }) {
         gsap.to('#gradient', {
             scrollTrigger: {
               trigger: '#home-intro',
-              start: '40% 30%', // Starts the check when the top of #home-intro hits the bottom of the viewport
+              start: '30% 30%', // Starts the check when the top of #home-intro hits the bottom of the viewport
               end: '80% 30%%', // Ends (triggers the animation) when the bottom of #home-intro exits the top of the viewport
               markers: false, // Change to true to see the trigger area
               scrub: true,
