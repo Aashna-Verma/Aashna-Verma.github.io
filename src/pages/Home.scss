@@ -1,36 +1,36 @@
-h2 {
-	text-transform: uppercase;
-}
-
 /**************** header ****************/
-
-.home-header {
-	transition: transform 0.5s;
+.header-paragraph {
 	display: flex;
-	margin: 5em 1em 2em 1em;
+	align-items: center;
 	gap: 5em;
 
-	> h2 {
-		margin: 0;
-		line-height: 1em;
-		font-size: 3.5em;
+	.home-header {
+		transition: transform 0.5s;
+		display: flex;
+		flex-direction: column;
+		margin: 4em 1em 2em 1em;
+
+		h2 {
+			margin: 0;
+		}
+
+		.header-number {
+		}
+
+		.header-title {
+			margin-left: 1em;
+			font-size: 5.5em;
+			line-height: 1.4;
+			font-family: "fancyFont";
+		}
+	}
+
+	.header-p {
+		font-size: 1em;
 		text-transform: uppercase;
-		font-weight: 600;
-		color: var(--med-brown);
 	}
 }
-
 /**************** home about ****************/
-
-#home-about {
-	padding: 0 5em;
-}
-
-.about-p {
-	font-size: 2.25em;
-	text-transform: uppercase;
-	font-weight: 600;
-}
 
 .space {
 	height: 100px;

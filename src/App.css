@@ -22,26 +22,28 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
+	background-color: #0F0A08;
 	width: 0.75em;
 	background-color: none;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
+	
 	border-radius: 100vw;
 	margin-block: 0.5em;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #443E73;
-	border: .1em solid var(--surface-primary);
+	background: #443e7333;
+	border: .1em solid #0F0A08;
 	border-radius: 100vw;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #474b96;
+	background: #5147965f;
 }
 
 .clipy {
