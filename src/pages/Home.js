@@ -54,31 +54,55 @@ function Home() {
 			});
 		}, 50);
 
-		// gsap.fromTo('#gradient', {
-		// 	scrollTrigger:
-		// 	{
-		// 		trigger: '#home-about',
-		// 		start: '30% 30%',
-		// 		scrub: true,
-		// 	},
-		// 	width: '85vh', 
-		// 	height: '85vh', 
-		// 	borderRadius: '50%',
-		// },
-		// {
-		// 	scrollTrigger:
-		// 	{
-		// 		trigger: '#home-about',
-		// 		start: '30% 30%',
-		// 		end: '80% 30%%', 
-		// 		markers: true,
-		// 		scrub: true,
-		// 	},
-		// 	width: '30%',
-		// 	height: '100%',
-		// 	borderRadius: '0',
-		// }
-		// );
+		gsap.fromTo('#gradient', {
+			scrollTrigger:
+			{
+				trigger: '#home-about',
+				start: '30% 30%',
+				scrub: true,
+			},
+			left: '0',
+			width: '85vh', 
+			height: '85vh', 
+			borderRadius: '50%',
+		},
+		{
+			scrollTrigger:
+			{
+				trigger: '#home-about',
+				start: '30% 30%',
+				end: '80% 30%%', 
+				markers: true,
+				scrub: true,
+			},
+			left: 'calc(-30% + 10px)',
+			width: '40%',
+			height: '100%',
+			borderRadius: '0',
+		});
+
+		gsap.fromTo('#gradient', {
+            scrollTrigger: {
+              trigger: '#home-intro',
+              start: 'top top', 
+			  scrub: true,
+            },
+            width: '100%', 
+            height: '100%', 
+            borderRadius: '0',
+          },
+          {
+            scrollTrigger: {
+              trigger: '#home-intro',
+              start: '30% 30%',
+              end: '80% 30%%', 
+              markers: false,
+              scrub: true,
+            },
+            width: '85vh', 
+            height: '85vh', 
+            borderRadius: '50%',
+          });
 
 	});
 

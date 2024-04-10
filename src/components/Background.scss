@@ -10,6 +10,8 @@
 }
 
 #gradient {
+    z-index: -1001;
+    position: relative;
     width: 100%;
     height: 100%;
 }
