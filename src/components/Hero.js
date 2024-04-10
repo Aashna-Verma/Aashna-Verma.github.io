@@ -24,7 +24,17 @@ export default function Hero({ className }) {
             ease: 'elastic.out(1,0.4)'
         });
 
-        gsap.to('#gradient', {
+        gsap.fromTo('#gradient', {
+            scrollTrigger: {
+              trigger: '#home-intro',
+              start: 'top top', // Starts the check when the top of #home-intro hits the bottom of the viewport
+              scrub: true,
+            },
+            width: '100%', 
+            height: '100%', 
+            borderRadius: '0',
+          },
+          {
             scrollTrigger: {
               trigger: '#home-intro',
               start: '30% 30%', // Starts the check when the top of #home-intro hits the bottom of the viewport

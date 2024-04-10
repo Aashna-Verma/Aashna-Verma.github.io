@@ -54,6 +54,32 @@ function Home() {
 			});
 		}, 50);
 
+		// gsap.fromTo('#gradient', {
+		// 	scrollTrigger:
+		// 	{
+		// 		trigger: '#home-about',
+		// 		start: '30% 30%',
+		// 		scrub: true,
+		// 	},
+		// 	width: '85vh', 
+		// 	height: '85vh', 
+		// 	borderRadius: '50%',
+		// },
+		// {
+		// 	scrollTrigger:
+		// 	{
+		// 		trigger: '#home-about',
+		// 		start: '30% 30%',
+		// 		end: '80% 30%%', 
+		// 		markers: true,
+		// 		scrub: true,
+		// 	},
+		// 	width: '30%',
+		// 	height: '100%',
+		// 	borderRadius: '0',
+		// }
+		// );
+
 	});
 
 	// headers for each section
@@ -62,8 +88,8 @@ function Home() {
 			<div className='clipy'>
 				<div className='upsie header-paragraph'>
 					<div className='home-header'>
-					<h2 className='header-number'>{a}</h2>
-					<h2 className='header-title'>{b}</h2>
+						<h2 className='header-number'>{a}</h2>
+						<h2 className='header-title'>{b}</h2>
 					</div>
 					<p className='header-p'>{c}</p>
 				</div>
@@ -71,17 +97,13 @@ function Home() {
 		);
 	};
 
-	// colomns for skills
-	const column2 = (title, text, skills) => {
+	const skills = (title, icons) => {
 		return (
-			<div className='column-2'>
-				<div>
-					<h2 className='title line-popup'>{title}</h2>
-					<div className='line-popup normal-text'>{text}</div>
+			<div className='line-popup skill'>
+				<h3 className='skill-title'>{title}</h3>
+				<div className='skill-icons'>
+					{icons.map(icon => <i className={icon} />)}
 				</div>
-				<ul className='about-skills'>
-					{skills.map(skill => <li className='line-popup'>{skill}</li>)}
-				</ul>
 			</div>
 		);
 	};
@@ -93,8 +115,11 @@ function Home() {
 
 			<div className='home-section' id='home-about'>
 				{header('./01', 'About', 'I\'m a Software Engineering student @ CARLETON UNIVERSITY. Merging creativity with technology to create functional and aesthetic systems.')}
-				{column2('Skills', 'Shaped by my academic personal passions. This is a small peek into my continuous learning journey.', ['FullStack', 'UI/UX Design', 'Web Dev', 'Graphic Design'])}
-				{column2('Technologies', 'Over time, I\'ve cultivated this skill set, shaped by my academic pursuits at university and my personal passions. This is a small peek into my continuous learning journey.', ['JS/HTML/CSS', 'ReactJS', 'Blazor', 'Python', 'Java', 'Figma'])}
+				<div className='skills'>
+					{skills('Technologies', ['devicon-nodejs-plain', 'devicon-react-original', 'devicon-blazor-original', 'devicon-git-plain'])}
+					{skills('Languages', ['devicon-java-plain', 'devicon-csharp-plain', 'devicon-javascript-plain', 'devicon-python-plain', 'devicon-csharp-plain', 'devicon-sass-original'])}
+					{skills('Funsies', ['devicon-notion-plain', 'devicon-ashicon figma-outline', 'devicon-illustrator-plain', 'devicon-ashicon procreate-filled'])}
+				</div>
 			</div>
 
 			<div className='home-section' id='home-projects'>

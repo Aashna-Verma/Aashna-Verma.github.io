@@ -1,3 +1,7 @@
+h2, h3 {
+	font-family: "fancyFont";
+}
+
 /**************** header ****************/
 .header-paragraph {
 	display: flex;
@@ -14,14 +18,10 @@
 			margin: 0;
 		}
 
-		.header-number {
-		}
-
 		.header-title {
 			margin-left: 1em;
 			font-size: 5.5em;
 			line-height: 1.4;
-			font-family: "fancyFont";
 		}
 	}
 
@@ -35,6 +35,7 @@
 #home-about {
 	background-color: var(--surface-blur);
     backdrop-filter:blur(50px);
+	padding-bottom: 5em
 }
 
 .space {
@@ -47,36 +48,56 @@
 	padding: 0 3em;
 }
 
-.column-2 {
-	display: grid;
-	padding: 0 10em;
-	gap: 2em;
-	grid-template-columns: 1.5fr 1fr;
-	color: var(--med-gray);
+// skills
+.devicon-figma-outline{
+	display: inline-flex;
+}
 
-	.title {
+.ashicon::before {
+	content: "";
+	display: inline-block;
+	width: 1em;  /* Scale with font-size */
+	height: 1em; /* Scale with font-size */
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+  }
+
+.figma-outline::before {
+	background-image: url('../assets/figma.svg');
+}  
+
+.procreate-filled::before {
+	background-image: url('../assets/procreate.svg');
+}  
+
+.skills {
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+
+.skill {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	.skill-title {
 		font-size: 1.75em;
-		margin-left: 2.5em;
-		margin-bottom: 0.25em;
 	}
 
-	.normal-text {
-		font-size: 1.2em;
-	}
-
-	.about-skills {
-		margin-top: 2em;
-
-		li {
-			text-transform: uppercase;
-			font-size: 1.75em;
-			font-weight: 600;
-			list-style-type: none;
-			padding: unset;
-
-			div {
-				color: var(--med-gray);
-			}
-		}
+	.skill-icons{
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+		font-size: 3em;
+		gap: 0.5em;
 	}
 }
+
+
+
+
+
