@@ -108,26 +108,26 @@ function Home() {
 	});
 
 	const _technologies = [
-		{ tooltip: 'NodeJS', icon: 'devicon-nodejs-plain' },
-		{ tooltip: 'React', icon: 'devicon-react-original' },
-		{ tooltip: 'Blazor', icon: 'devicon-blazor-original' },
-		{ tooltip: 'Git', icon: 'devicon-git-plain' }
+		{ tooltip: 'NodeJS', icon: 'devicon-nodejs-plain', href: 'https://nodejs.org/en/' },
+		{ tooltip: 'React', icon: 'devicon-react-original', href: 'https://reactjs.org/' },
+		{ tooltip: 'Blazor', icon: 'devicon-blazor-original', href: 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor' },
+		{ tooltip: 'Git', icon: 'devicon-git-plain', href: 'https://git-scm.com/' },
 	];
 
 	const _languages = [
-		{ tooltip: 'Java', icon: 'devicon-java-plain' },
-		{ tooltip: 'C#', icon: 'devicon-csharp-plain' },
-		{ tooltip: 'JavaScript', icon: 'devicon-javascript-plain' },
-		{ tooltip: 'Python', icon: 'devicon-python-plain' },
-		{ tooltip: 'C++', icon: 'devicon-cplusplus-plain' },
-		{ tooltip: 'Sass', icon: 'devicon-sass-original' }
+		{ tooltip: 'Java', icon: 'devicon-java-plain', href: 'https://www.java.com/en/'},
+		{ tooltip: 'C#', icon: 'devicon-csharp-plain', href: 'https://docs.microsoft.com/en-us/dotnet/csharp/'},
+		{ tooltip: 'JavaScript', icon: 'devicon-javascript-plain', href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'},
+		{ tooltip: 'Python', icon: 'devicon-python-plain', href: 'https://www.python.org/'},
+		{ tooltip: 'C++', icon: 'devicon-cplusplus-plain', href: 'https://www.cplusplus.com/'},
+		{ tooltip: 'Sass', icon: 'devicon-sass-original', href: 'https://sass-lang.com/'}
 	];
 
 	const _funsies = [
-		{ tooltip: 'Notion', icon: 'devicon-notion-plain' },
-		{ tooltip: 'Figma', icon: 'devicon-ashicon figma-outline' },
-		{ tooltip: 'Illustrator', icon: 'devicon-illustrator-plain' },
-		{ tooltip: 'Procreate', icon: 'devicon-ashicon procreate-filled' }
+		{ tooltip: 'Notion', icon: 'devicon-notion-plain', href: 'https://www.notion.so/' },
+		{ tooltip: 'Figma', icon: 'devicon-ashicon figma-outline', href: 'https://www.figma.com/'},
+		{ tooltip: 'Illustrator', icon: 'devicon-illustrator-plain', href: 'https://www.adobe.com/ca/products/illustrator.html'},
+		{ tooltip: 'Procreate', icon: 'devicon-ashicon procreate-filled', href: 'https://procreate.art/'}
 	];
 
 
@@ -158,7 +158,8 @@ function Home() {
 								data-tooltip-id="ash-tooltip"
 								data-tooltip-content={item.tooltip}
 								data-tooltip-place="bottom"
-								href={item.tooltip}
+								href={item.href}
+								target='_blank'
 							>
 								<i className={item.icon} />
 							</a>
