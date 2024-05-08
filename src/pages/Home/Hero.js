@@ -2,7 +2,7 @@ import './Hero.scss';
 import { useEffect } from 'react';
 import SplitType from 'split-type';
 import { gsap } from 'gsap';
-import sparkle from '../assets/sparkle.svg';
+import sparkle from '../../assets/sparkle.svg';
 
 export default function Hero({ className }) {
 

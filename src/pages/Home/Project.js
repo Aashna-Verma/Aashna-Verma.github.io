@@ -1,7 +1,7 @@
 import './Project.scss';
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
-import arrow from '../assets/arrow.svg';
+import arrow from '../../assets/arrow.svg';
 
 
 function Project({ img, title, tags, links }) {

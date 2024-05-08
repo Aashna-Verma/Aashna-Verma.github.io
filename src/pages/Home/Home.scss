@@ -68,11 +68,11 @@ h2, h3 {
   }
 
 .figma-outline::before {
-	background-image: url('../assets/figma.svg');
+	background-image: url('../../assets/figma.svg');
 }  
 
 .procreate-filled::before {
-	background-image: url('../assets/procreate.svg');
+	background-image: url('../../assets/procreate.svg');
 }  
 
 .skills {
@@ -98,8 +98,21 @@ h2, h3 {
 		align-items: center;
 		font-size: 3em;
 		gap: 0.5em;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+
+			i {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
 	}
 }
+
+
 
 
 

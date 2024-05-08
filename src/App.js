@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import React, { useEffect, useState, Suspense } from "react";
 import Nav from './components/Nav';
 import Background from './components/Background';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import Art from './pages/Art';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
