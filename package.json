@@ -2,12 +2,15 @@
   "name": "aashna-verma-website",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://aashna-verma.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "gsap": "^3.12.5",
@@ -29,6 +32,7 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "gh-pages": "^6.1.1",
     "sass": "^1.77.0",
     "vite": "^5.2.0"
   }
