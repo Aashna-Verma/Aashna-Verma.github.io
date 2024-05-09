@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/aashna-verma/static/css/main.ec20b715.css",
+    "main.js": "/aashna-verma/static/js/main.1a7a0636.js",
+    "static/media/gradient.png": "/aashna-verma/static/media/gradient.2edb9e5f15c441c7b45d.png",
+    "static/media/cuHacking.png": "/aashna-verma/static/media/cuHacking.a3d7771d12dd766af48b.png",
+    "static/media/unoFlip.png": "/aashna-verma/static/media/unoFlip.041e5e888236d03637df.png",
+    "static/media/procreate.svg": "/aashna-verma/static/media/procreate.38a5aadc1c05860527f0.svg",
+    "static/media/figma.svg": "/aashna-verma/static/media/figma.9436973b700e089b04b2.svg",
+    "static/media/favicon.svg": "/aashna-verma/static/media/favicon.a2d473c786dff05e1529b063f645a7b4.svg",
+    "index.html": "/aashna-verma/index.html",
+    "static/media/sparkle.svg": "/aashna-verma/static/media/sparkle.e95a3529aa9803b73ee0c1589be88307.svg",
+    "static/media/arrow.svg": "/aashna-verma/static/media/arrow.dec5a69e02a0a18f09b022ca8b3400c3.svg",
+    "main.ec20b715.css.map": "/aashna-verma/static/css/main.ec20b715.css.map",
+    "main.1a7a0636.js.map": "/aashna-verma/static/js/main.1a7a0636.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec20b715.css",
+    "static/js/main.1a7a0636.js"
+  ]
+}
