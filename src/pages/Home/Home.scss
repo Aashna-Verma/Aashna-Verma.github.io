@@ -77,6 +77,7 @@ h2, h3 {
 
 .skills {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-evenly;
 	
 }
@@ -87,6 +88,7 @@ h2, h3 {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	margin: 1em;
 
 	.skill-title {
 		font-size: 1.75em;
