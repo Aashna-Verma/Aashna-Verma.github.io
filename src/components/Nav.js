@@ -71,7 +71,7 @@ function Nav() {
                 </Link>
             </div>
 
-            <div className='nav-right'>
+            {/* <div className='nav-right'>
                 <span className='nav-link'>
                     <Link to='/art'>./art </Link>
                     <span className='underline'></span>
@@ -88,7 +88,7 @@ function Nav() {
                     <Link to='/inspiration'>./inspiration </Link>
                     <span className='underline'></span>
                 </span>
-            </div>
+            </div> */}
         </div>
     );
 }

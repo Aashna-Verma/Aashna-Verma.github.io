@@ -4,7 +4,8 @@ import Hero from './Hero';
 import { gsap } from 'gsap';
 import { useEffect } from 'react';
 import SplitType from 'split-type';
-import img from '../../assets/projects/fireRacoon.png';
+import cuHacking_img from '../../assets/projects/cuHacking.png';
+import unoFlip_img from '../../assets/projects/unoFlip.png';
 import { Tooltip } from 'react-tooltip';
 
 
@@ -54,6 +55,35 @@ function Home() {
 				});
 			});
 		}, 50);
+
+		gsap.fromTo('#gradient', {
+			scrollTrigger:
+			{
+				trigger: '#home-project',
+				start: '30% 30%',
+				scrub: true,
+			},
+				left: 'calc(-30% + 10px)',
+				width: '40%',
+				height: '100%',
+				borderRadius: '0',
+				position: 'relative',
+		},
+			{
+				scrollTrigger:
+				{
+					trigger: '#home-project',
+					start: '80% 30%',
+					end: '90% 30%%',
+					markers: true,
+					scrub: true,
+				},
+				left: '0',
+				bottom: '-50%',
+				width: '90vw',
+				height: '100vw',
+				borderRadius: '1000px 1000px 0 0',
+			});
 
 		gsap.fromTo('#gradient', {
 			scrollTrigger:
@@ -123,10 +153,10 @@ function Home() {
 
 			<div className='home-section' id='home-projects'>
 				{Header('./02', 'Recent projects')}
-				{_projects.map((project) => <Project img={img} title={project.title} tags={project.tags} links={project.links} />)}
+				{_projects.map((project) => <Project img={project.img} title={project.title} tags={project.tags} links={project.links} tools={project.tools} />)}
 			</div>
 
-			<div id='home-projects'>
+			<div className='home-section' id='home-projects'>
 				{Header('./03', 'contact me')}
 			</div>
 
@@ -138,48 +168,7 @@ function Home() {
 
 export default Home;
 
-const _technologies = [
-	{ tooltip: 'NodeJS', icon: 'devicon-nodejs-plain', href: 'https://nodejs.org/en/' },
-	{ tooltip: 'React', icon: 'devicon-react-original', href: 'https://reactjs.org/' },
-	{ tooltip: 'Blazor', icon: 'devicon-blazor-original', href: 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor' },
-	{ tooltip: 'Git', icon: 'devicon-git-plain', href: 'https://git-scm.com/' },
-];
 
-const _languages = [
-	{ tooltip: 'Java', icon: 'devicon-java-plain', href: 'https://www.java.com/en/' },
-	{ tooltip: 'C#', icon: 'devicon-csharp-plain', href: 'https://docs.microsoft.com/en-us/dotnet/csharp/' },
-	{ tooltip: 'JavaScript', icon: 'devicon-javascript-plain', href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
-	{ tooltip: 'Python', icon: 'devicon-python-plain', href: 'https://www.python.org/' },
-	{ tooltip: 'C++', icon: 'devicon-cplusplus-plain', href: 'https://www.cplusplus.com/' },
-	{ tooltip: 'Sass', icon: 'devicon-sass-original', href: 'https://sass-lang.com/' }
-];
-
-const _funsies = [
-	{ tooltip: 'Notion', icon: 'devicon-notion-plain', href: 'https://www.notion.so/' },
-	{ tooltip: 'Figma', icon: 'devicon-ashicon figma-outline', href: 'https://www.figma.com/' },
-	{ tooltip: 'Illustrator', icon: 'devicon-illustrator-plain', href: 'https://www.adobe.com/ca/products/illustrator.html' },
-	{ tooltip: 'Procreate', icon: 'devicon-ashicon procreate-filled', href: 'https://procreate.art/' }
-];
-
-const _projects = [
-	{
-		img: img,
-		title: 'ColorMe',
-		tags: ['FrontEnd', 'BackEnd'],
-		links: [['Github', 'https://github.com/Isabella-Nguyen/ColourMe']]
-	},
-	{
-		img: img,
-		title: 'cuHacking',
-		tags: ['FrontEnd', 'BackEnd']
-	},
-	{
-		img: img,
-		title: 'ColorMe',
-		tags: ['FrontEnd', 'BackEnd'],
-		links: [['Github', 'https://github.com/Isabella-Nguyen/ColourMe']]
-	}
-];
 
 // headers for each section
 const Header = (number, title, paragraph) => {
@@ -220,3 +209,46 @@ const Skills = (title, icons) => {
 		</div>
 	);
 };
+const devI = {
+	'NodeJS': { tooltip: 'NodeJS', icon: 'devicon-nodejs-plain', href: 'https://nodejs.org/en/' },
+	'React': { tooltip: 'React', icon: 'devicon-react-original', href: 'https://reactjs.org/' },
+	'Blazor': { tooltip: 'Blazor', icon: 'devicon-blazor-original', href: 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor' },
+	'Git': { tooltip: 'Git', icon: 'devicon-git-plain', href: 'https://git-scm.com/' },
+	'Java': { tooltip: 'Java', icon: 'devicon-java-plain', href: 'https://www.java.com/en/' },
+	'JUnit': { tooltip: 'JUnit', icon: 'devicon-junit-plain', href: 'https://junit.org/junit5/' },
+	'C#': { tooltip: 'C#', icon: 'devicon-csharp-plain', href: 'https://docs.microsoft.com/en-us/dotnet/csharp/' },
+	'JavaScript': { tooltip: 'JavaScript', icon: 'devicon-javascript-plain', href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+	'Python': { tooltip: 'Python', icon: 'devicon-python-plain', href: 'https://www.python.org/' },
+	'C++': { tooltip: 'C++', icon: 'devicon-cplusplus-plain', href: 'https://www.cplusplus.com/' },
+	'Sass': { tooltip: 'Sass', icon: 'devicon-sass-original', href: 'https://sass-lang.com/' },
+	'Notion': { tooltip: 'Notion', icon: 'devicon-notion-plain', href: 'https://www.notion.so/' },
+	'Figma': { tooltip: 'Figma', icon: 'devicon-ashicon figma-outline', href: 'https://www.figma.com/' },
+	'Illustrator': { tooltip: 'Illustrator', icon: 'devicon-illustrator-plain', href: 'https://www.adobe.com/ca/products/illustrator.html' },
+	'Procreate': { tooltip: 'Procreate', icon: 'devicon-ashicon procreate-filled', href: 'https://procreate.art/' },
+	'Tailwind': { tooltip: 'Tailwind', icon: 'devicon-tailwindcss-original', href: 'https://tailwindcss.com/' },
+	'ViteJS': { tooltip: 'ViteJS', icon: 'devicon-vitejs-plain', href: 'https://vitejs.dev/' },
+	'HTML': { tooltip: 'HTML', icon: 'devicon-html5-plain', href: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+	'CSS': { tooltip: 'CSS', icon: 'devicon-css3-plain', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+};
+
+const _technologies = [devI['NodeJS'], devI['React'], devI['Blazor'], devI['Git']];
+const _languages = [devI['Java'], devI['C#'], devI['JavaScript'], devI['Python'], devI['C++'], devI['Sass']];
+const _funsies = [devI['Notion'], devI['Figma'], devI['Illustrator'], devI['Procreate']];
+
+const _projects = [
+	{
+		img: cuHacking_img,
+		title: 'cuHacking',
+		tags: ['Live link comming soon!', 'FrontEnd', 'UI/UX', 'BackEnd'],
+		links: [['Github', 'https://github.com/Isabella-Nguyen/ColourMe']],
+		tools: [devI['React'], devI['NodeJS'], devI['Figma'], devI['Tailwind'], devI['ViteJS']]
+	},
+	{
+		img: unoFlip_img,
+		title: 'Uno Flip',
+		tags: ['FullStack'],
+		links: [['Github', 'https://github.com/Aashna-Verma/SYSC-3110-UNO']],
+		tools: [devI['Java'], devI['JUnit']]
+	}
+];
+
