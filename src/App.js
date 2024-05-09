@@ -17,7 +17,7 @@ function App() {
 	
 
 	useEffect(() => {
-		window.onresize = function(){ window.location.reload();}
+		//window.onresize = function(){ window.location.reload();}
 	}, [])
 
 	useEffect(() => {

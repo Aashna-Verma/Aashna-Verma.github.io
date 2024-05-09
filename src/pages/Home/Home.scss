@@ -102,18 +102,65 @@ h3 {
 		font-size: 3em;
 		gap: 0.5em;
 
-		a {
-			text-decoration: none;
-			color: inherit;
-
-			i {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-		}
 	}
 }
+
+a {
+	text-decoration: none;
+	color: inherit;
+
+	i {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.contact-info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 6em;
+	margin-bottom: 1em;
+
+	.contact-icons {
+		display: flex;
+		gap: 1em;
+	
+	}
+}
+
+#my-email {
+	width: 100%;
+	padding: 0.2em 0;
+	margin: 0.25em 0 1em 0;
+	text-align: center;
+	font-size: 6rem;
+	font-family: 'regularFont';
+	background-color: var(--surface-blur);
+	backdrop-filter: blur(50px);
+	cursor: pointer;
+}
+
+.spark {
+	position: absolute;
+	width: 100px;
+	height: 5px;
+	border-radius: 100px;
+	background-color: rgba(232, 211, 25, 0.496);
+	transform: none;
+  }
+
+  .spark-copied {
+	position: absolute;
+	transform: none;
+
+	div {
+		rotate: 80deg;
+	}
+	
+  }
 
 #ash-tooltip {
 	background-color: transparent;

@@ -7,9 +7,10 @@ import SplitType from 'split-type';
 import cuHacking_img from '../../assets/projects/cuHacking.png';
 import unoFlip_img from '../../assets/projects/unoFlip.png';
 import { Tooltip } from 'react-tooltip';
+import { makeBurst } from './Spark';
 
 
-function Home() {
+export default function Home() {
 
 	useEffect(() => {
 		console.log('mounted');
@@ -57,68 +58,77 @@ function Home() {
 		}, 50);
 
 		gsap.from('#gradient', {
-				scrollTrigger:
-				{
-					trigger: '#home-project',
-					start: '90% 30%',
-					end: '80% 30%%',
-					markers: true,
-					scrub: true,
-				},
-				top: '50%',
-				left: '0',
-				width: '90vw',
-				height: '100vw',
-				borderRadius: '1000px 1000px 0 0',
-			});
+			lazy: false,
+			scrollTrigger:
+			{
+				trigger: '#home-project',
+				start: '85% 30%',
+				end: '70% 30%%',
+				markers: false,
+				scrub: true,
+			},
+			top: '50%',
+			left: '0',
+			width: '90vw',
+			height: '100vh',
+			borderRadius: '1000px 1000px 0 0',
+		});
 
 		gsap.from('#gradient', {
-				scrollTrigger:
-				{
-					trigger: '#home-project',
-					start: '80% 30%',
-					end: '90% 30%%',
-					markers: false,
-					scrub: true,
-				},
-				top: '0',
-				left: 'calc(-30% + 10px)',
-				width: '40%',
-				height: '100%',
-				borderRadius: '0',
-			});
+			scrollTrigger:
+			{
+				trigger: '#home-project',
+				start: '70% 30%',
+				end: '85% 30%%',
+				markers: false,
+				scrub: true,
+			},
+			top: '0',
+			left: 'calc(-30% + 10px)',
+			width: '40vw',
+			height: '100vh',
+			borderRadius: '0',
+		});
 
 		gsap.from('#gradient', {
-				scrollTrigger: {
-					trigger: '#home-about',
-					start: '30% 30%',
-					end: '80% 30%%',
-					markers: false,
-					scrub: true,
-				},
-				top: '0',
-				left: '0',
-				width: '85vh',
-				height: '85vh',
-				borderRadius: '50%',
-			});
+			scrollTrigger: {
+				trigger: '#home-about',
+				start: '30% 30%',
+				end: '85% 30%%',
+				markers: false,
+				scrub: true,
+			},
+			top: '0',
+			left: '0',
+			width: '85vh',
+			height: '85vh',
+			borderRadius: '1000px',
+		});
 
-			gsap.from('#gradient', {
-				scrollTrigger: {
-					trigger: '#home-intro',
-					start: '30% 30%',
-					end: '80% 30%%',
-					markers: false,
-					scrub: true,
-				},
-				top: '0',
-				left: '0',
-				width: '100vw',
-				height: '100vh',
-				borderRadius: '0',
-			});
+		gsap.from('#gradient', {
+			scrollTrigger: {
+				trigger: '#home-intro',
+				start: '30% 30%',
+				end: '80% 30%%',
+				markers: false,
+				scrub: true,
+			},
+			top: '0',
+			left: '0',
+			width: '100vw',
+			height: '100vh',
+			borderRadius: '0',
+		});
 
 	});
+
+	const copyEmail = (e) => {
+		const email = document.getElementById('my-email');
+		navigator.clipboard.writeText(email.innerText);
+
+		const center = { x: e.pageX, y: e.pageY };
+  		makeBurst(center);
+	};
 
 	return (
 		<div className='Home'>
@@ -139,18 +149,32 @@ function Home() {
 				{_projects.map((project) => <Project img={project.img} title={project.title} tags={project.tags} links={project.links} tools={project.tools} />)}
 			</div>
 
-			<div className='home-section' id='home-projects'>
+			<div className='home-section' id='home-contact'>
 				{Header('./03', 'contact me')}
+				<div className='contact-info'>
+					<h2 class="upsie" id="my-email" onClick={copyEmail}>aashna.verma@outlook.com</h2>
+					<div className='contact-icons upsie'>
+						{contacts.map((item) => {
+							return (
+								<a
+									key={item.tooltip}
+									data-tooltip-id="ash-tooltip"
+									data-tooltip-content={item.tooltip}
+									data-tooltip-place="bottom"
+									href={item.href}
+									target='_blank'
+								>
+									<i className={item.icon} />
+								</a>
+							);
+						})}
+					</div>
+				</div>
 			</div>
-
-			<div className='space'></div>
 			<Tooltip id="ash-tooltip" />
 		</div>
 	);
 }
-
-export default Home;
-
 
 
 // headers for each section
@@ -192,7 +216,7 @@ const Skills = (title, icons) => {
 		</div>
 	);
 };
-const devI = {
+const ICON = {
 	'NodeJS': { tooltip: 'NodeJS', icon: 'devicon-nodejs-plain', href: 'https://nodejs.org/en/' },
 	'React': { tooltip: 'React', icon: 'devicon-react-original', href: 'https://reactjs.org/' },
 	'Blazor': { tooltip: 'Blazor', icon: 'devicon-blazor-original', href: 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor' },
@@ -212,11 +236,16 @@ const devI = {
 	'ViteJS': { tooltip: 'ViteJS', icon: 'devicon-vitejs-plain', href: 'https://vitejs.dev/' },
 	'HTML': { tooltip: 'HTML', icon: 'devicon-html5-plain', href: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
 	'CSS': { tooltip: 'CSS', icon: 'devicon-css3-plain', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+
+	'Github': { tooltip: 'Github', icon: 'devicon-github-original', href: 'https://github.com/Aashna-Verma' },
+	'LinkedIn': { tooltip: 'LinkedIn', icon: 'devicon-linkedin-plain', href: 'https://www.linkedin.com/in/aashna-verma-000' },
 };
 
-const _technologies = [devI['NodeJS'], devI['React'], devI['Blazor'], devI['Git']];
-const _languages = [devI['Java'], devI['C#'], devI['JavaScript'], devI['Python'], devI['C++'], devI['Sass']];
-const _funsies = [devI['Notion'], devI['Figma'], devI['Illustrator'], devI['Procreate']];
+const _technologies = [ICON['NodeJS'], ICON['React'], ICON['Blazor'], ICON['Git']];
+const _languages = [ICON['Java'], ICON['C#'], ICON['JavaScript'], ICON['Python'], ICON['C++'], ICON['Sass']];
+const _funsies = [ICON['Notion'], ICON['Figma'], ICON['Illustrator'], ICON['Procreate']];
+
+const contacts = [ICON['Github'], ICON['LinkedIn']];
 
 const _projects = [
 	{
@@ -224,14 +253,13 @@ const _projects = [
 		title: 'cuHacking',
 		tags: ['Live link comming soon!', 'FrontEnd', 'UI/UX', 'BackEnd'],
 		links: [['Github', 'https://github.com/Isabella-Nguyen/ColourMe']],
-		tools: [devI['React'], devI['NodeJS'], devI['Figma'], devI['Tailwind'], devI['ViteJS']]
+		tools: [ICON['React'], ICON['NodeJS'], ICON['Figma'], ICON['Tailwind'], ICON['ViteJS']]
 	},
 	{
 		img: unoFlip_img,
 		title: 'Uno Flip',
 		tags: ['FullStack'],
 		links: [['Github', 'https://github.com/Aashna-Verma/SYSC-3110-UNO']],
-		tools: [devI['Java'], devI['JUnit']]
+		tools: [ICON['Java'], ICON['JUnit']]
 	}
 ];
-
