@@ -132,7 +132,7 @@ a {
 }
 
 #my-email {
-	width: 100%;
+	width: 99vw;
 	padding: 0.2em 0;
 	margin: 0.25em 0 1em 0;
 	text-align: center;
@@ -175,6 +175,10 @@ a {
 			}
 		}
 	}
+
+	#my-email {
+		font-size: 4.5rem;
+	}
 }
 
 @media (max-width: 800px) {
@@ -205,4 +209,50 @@ a {
 	.skills {
 		flex-direction: column;
 	}
+
+	#my-email {
+		font-size: 3.5rem;
+	}
+
+
+	html {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 650px) {
+	#my-email {
+		padding-top: 1.5em ;
+		padding-bottom: 1.5em;
+		font-size: 2rem;
+	}
+
+	#home-intro {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+		#intro-words {
+		font-size: 5em;
+		line-height: normal;
+		margin: 0;
+
+		* {
+			font-size: inherit !important;
+			line-height: inherit !important;
+		}
+
+		.intro-name {
+			height: auto !important;
+		}
+
+	}
+
+	.intro-sparkle {
+		width: auto !important;
+		height: auto !important;
+		right: 0 !important;
+	}
+	}
+	
 }
