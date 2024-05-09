@@ -1,0 +1,22 @@
+#background{
+    z-index: -1000;
+    position: fixed !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
+#gradient {
+    object-fit: cover;
+    z-index: -1001;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#background::before{
+    mix-blend-mode: soft-light;
+}
