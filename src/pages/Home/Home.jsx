@@ -153,13 +153,13 @@ export default function Home() {
 
 			<div className='home-section' id='home-projects'>
 				{Header('./02', 'Recent projects')}
-				{_projects.map((project) => <Project img={project.img} title={project.title} tags={project.tags} links={project.links} tools={project.tools} />)}
+				{_projects.map((project, index) => <Project key={index} img={project.img} title={project.title} tags={project.tags} links={project.links} tools={project.tools} />)}
 			</div>
 
 			<div className='home-section' id='home-contact'>
 				{Header('./03', 'contact me')}
 				<div className='contact-info'>
-					<h2 class="upsie" id="my-email" onClick={copyEmail}>aashna.verma@outlook.com</h2>
+					<button className="upsie" id="my-email" onClick={copyEmail}>aashna.verma@outlook.com</button>
 					<div className='contact-icons upsie'>
 						{contacts.map((item) => {
 							return (

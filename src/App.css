@@ -18,7 +18,7 @@ body {
 	margin: 0;
 	background-color: var(--surface-primary);
 	color: var(--text-primary);
-	overflow: auto;
+	overflow-x: hidden;
 	scrollbar-gutter: auto;
 }
 
