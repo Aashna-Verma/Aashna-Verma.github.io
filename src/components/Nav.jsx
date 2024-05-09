@@ -1,5 +1,5 @@
 import './Nav.scss';
-import './Nav.css';
+//import './Nav.css';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { gsap } from 'gsap';

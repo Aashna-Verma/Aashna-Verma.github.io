@@ -9,17 +9,21 @@ import unoFlip_img from '../../assets/project_home/unoFlip.png';
 import { Tooltip } from 'react-tooltip';
 import { makeBurst } from '../../asset/spark';
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 export default function Home() {
 
 	useEffect(() => {
-		console.log('mounted');
-		gsap.to('.block', {
-			opacity: 0,
-			duration: 1.5,
-			delay: 1,
-			zIndex: -1
-		});
+		// console.log('mounted');
+		// gsap.to('.block', {
+		// 	opacity: 0,
+		// 	duration: 1.5,
+		// 	delay: 1,
+		// 	zIndex: -1
+		// });
+
+		gsap.registerPlugin(ScrollTrigger) 
 
 		setTimeout(() => {
 			new SplitType('.line-popup', { types: 'lines', lineClass: 'clipy-line-popup clipy' });
@@ -61,9 +65,9 @@ export default function Home() {
 			lazy: false,
 			scrollTrigger:
 			{
-				trigger: '#home-project',
+				trigger: '#home-contact',
 				start: '85% 30%',
-				end: '70% 30%%',
+				end: '60% 30%%',
 				markers: false,
 				scrub: true,
 			},
@@ -75,10 +79,11 @@ export default function Home() {
 		});
 
 		gsap.from('#gradient', {
+			lazy: false,
 			scrollTrigger:
 			{
-				trigger: '#home-project',
-				start: '70% 30%',
+				trigger: '#home-projects',
+				start: '60% 30%',
 				end: '85% 30%%',
 				markers: false,
 				scrub: true,
@@ -91,6 +96,7 @@ export default function Home() {
 		});
 
 		gsap.from('#gradient', {
+			lazy: false,
 			scrollTrigger: {
 				trigger: '#home-about',
 				start: '30% 30%',
@@ -106,9 +112,10 @@ export default function Home() {
 		});
 
 		gsap.from('#gradient', {
+			lazy: false,
 			scrollTrigger: {
 				trigger: '#home-intro',
-				start: '30% 30%',
+				start: '40% 30%',
 				end: '80% 30%%',
 				markers: false,
 				scrub: true,

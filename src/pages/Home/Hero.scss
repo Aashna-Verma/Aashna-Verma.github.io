@@ -6,29 +6,26 @@
 	position: relative;
 
 	.intro-sparkle {
-			position: relative;
-			width: 5em;
-			height: 6em;
-			margin-top: 1em;
-			right: 30px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		position: relative;
+		width: 5em;
+		height: 6em;
+		margin-top: 1em;
+		right: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		.sparkle {
 			width: 0.1em;
 			height: 0.1em;
 		}
 	}
-
-	
-
 }
 
 #intro-words {
 	position: relative;
 	z-index: 5;
-	font-family: 'fancyFont';
+	font-family: "fancyFont";
 	margin-left: 40px;
 
 	* {
@@ -40,7 +37,6 @@
 		height: 200px;
 		line-height: 1.5;
 	}
-
 }
 
 .char {
