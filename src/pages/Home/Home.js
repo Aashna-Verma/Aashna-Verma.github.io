@@ -56,73 +56,54 @@ function Home() {
 			});
 		}, 50);
 
-		gsap.fromTo('#gradient', {
-			scrollTrigger:
-			{
-				trigger: '#home-project',
-				start: '30% 30%',
-				scrub: true,
-			},
-				left: 'calc(-30% + 10px)',
-				width: '40%',
-				height: '100%',
-				borderRadius: '0',
-				position: 'relative',
-		},
-			{
+		gsap.from('#gradient', {
 				scrollTrigger:
 				{
 					trigger: '#home-project',
-					start: '80% 30%',
-					end: '90% 30%%',
+					start: '90% 30%',
+					end: '80% 30%%',
 					markers: true,
 					scrub: true,
 				},
+				top: '50%',
 				left: '0',
-				bottom: '-50%',
 				width: '90vw',
 				height: '100vw',
 				borderRadius: '1000px 1000px 0 0',
 			});
 
-		gsap.fromTo('#gradient', {
-			scrollTrigger:
-			{
-				trigger: '#home-about',
-				start: '30% 30%',
-				scrub: true,
-			},
-			left: '0',
-			width: '85vh',
-			height: '85vh',
-			borderRadius: '50%',
-		},
-			{
+		gsap.from('#gradient', {
 				scrollTrigger:
 				{
+					trigger: '#home-project',
+					start: '80% 30%',
+					end: '90% 30%%',
+					markers: false,
+					scrub: true,
+				},
+				top: '0',
+				left: 'calc(-30% + 10px)',
+				width: '40%',
+				height: '100%',
+				borderRadius: '0',
+			});
+
+		gsap.from('#gradient', {
+				scrollTrigger: {
 					trigger: '#home-about',
 					start: '30% 30%',
 					end: '80% 30%%',
 					markers: false,
 					scrub: true,
 				},
-				left: 'calc(-30% + 10px)',
-				width: '40%',
-				height: '100%',
-				borderRadius: '0',
+				top: '0',
+				left: '0',
+				width: '85vh',
+				height: '85vh',
+				borderRadius: '50%',
 			});
 
-		gsap.fromTo('#gradient', {
-			scrollTrigger: {
-				trigger: '#home-intro',
-				start: 'top top',
-				scrub: true,
-			},
-			width: '100%',
-			height: '100%',
-			borderRadius: '0',
-		},
-			{
+			gsap.from('#gradient', {
 				scrollTrigger: {
 					trigger: '#home-intro',
 					start: '30% 30%',
@@ -130,9 +111,11 @@ function Home() {
 					markers: false,
 					scrub: true,
 				},
-				width: '85vh',
-				height: '85vh',
-				borderRadius: '50%',
+				top: '0',
+				left: '0',
+				width: '100vw',
+				height: '100vh',
+				borderRadius: '0',
 			});
 
 	});
