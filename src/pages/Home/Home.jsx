@@ -23,13 +23,12 @@ export default function Home() {
 
 		gsap.registerPlugin(ScrollTrigger);
 
-		setTimeout(() => {
+		// setTimeout(() => {
 			new SplitType(".line-popup", { types: "lines", lineClass: "clipy-line-popup clipy" });
 			new SplitType(".clipy-line-popup ", { types: "lines", lineClass: "upsie" });
 
-			var upsies = document.querySelectorAll(".upsie");
-			upsie += document.querySelectorAll(".project-popup");
-
+			var upsies = document.querySelectorAll(".upsie, .project-popup");
+			
 			upsies.forEach((upsie) => {
 				gsap.timeline({
 					scrollTrigger: {
@@ -107,7 +106,7 @@ export default function Home() {
 				height: "min(100vh, 100vh)",
 				borderRadius: "0",
 			});
-		}, 50);
+		// }, 50);
 	});
 
 	const copyEmail = (e) => {
