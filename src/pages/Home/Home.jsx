@@ -42,7 +42,9 @@ export default function Home() {
 					y: 0,
 				});
 			});
+		}, 50);
 
+		setTimeout(() => {
 			gsap.from("#gradient", {
 				lazy: false,
 				scrollTrigger: {
@@ -106,7 +108,7 @@ export default function Home() {
 				height: "min(100lvh, 100lvh)",
 				borderRadius: "0",
 			});
-		}, 50);
+		}, 200);
 	});
 
 	const copyEmail = (e) => {
