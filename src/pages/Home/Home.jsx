@@ -23,7 +23,7 @@ export default function Home() {
 
 		gsap.registerPlugin(ScrollTrigger);
 
-		// setTimeout(() => {
+		setTimeout(() => {
 			new SplitType(".line-popup", { types: "lines", lineClass: "clipy-line-popup clipy" });
 			new SplitType(".clipy-line-popup ", { types: "lines", lineClass: "upsie" });
 
@@ -54,8 +54,8 @@ export default function Home() {
 				},
 				top: "50%",
 				left: "0",
-				width: "min(90vw, 90vw)",
-				height: "min(100vh, 100vh)",
+				width: "min(90dvw, 90dvw)",
+				height: "min(100dvh, 100dvh)",
 				borderRadius: "1000px 1000px 0 0",
 			});
 
@@ -70,8 +70,8 @@ export default function Home() {
 				},
 				top: "0",
 				left: "calc(-30% + 10px)",
-				width: "min(40vw, 40vw)",
-				height: "min(100vh, 100vh)",
+				width: "min(40dvw, 40dvw)",
+				height: "min(100dvh, 100dvh)",
 				borderRadius: "0",
 			});
 
@@ -86,8 +86,8 @@ export default function Home() {
 				},
 				top: "0",
 				left: "0",
-				width: "min(85vh, 85vw)",
-				height: "min(85vh, 85vw)",
+				width: "min(85dvh, 85dvw)",
+				height: "min(85dvh, 85dvw)",
 				borderRadius: "1000px",
 			});
 
@@ -102,11 +102,11 @@ export default function Home() {
 				},
 				top: "0",
 				left: "0",
-				width: "min(100vw, 100vw)",
-				height: "min(100vh, 100vh)",
+				width: "min(100dvw, 100dvw)",
+				height: "min(100dvh, 100dvh)",
 				borderRadius: "0",
 			});
-		// }, 50);
+		}, 50);
 	});
 
 	const copyEmail = (e) => {
