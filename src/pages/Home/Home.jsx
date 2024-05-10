@@ -54,8 +54,8 @@ export default function Home() {
 				},
 				top: "50%",
 				left: "0",
-				width: "min(90dvw, 90dvw)",
-				height: "min(100dvh, 100dvh)",
+				width: "min(90lvw, 90lvw)",
+				height: "min(100lvh, 100lvh)",
 				borderRadius: "1000px 1000px 0 0",
 			});
 
@@ -70,8 +70,8 @@ export default function Home() {
 				},
 				top: "0",
 				left: "calc(-30% + 10px)",
-				width: "min(40dvw, 40dvw)",
-				height: "min(100dvh, 100dvh)",
+				width: "min(40lvw, 40lvw)",
+				height: "min(100lvh, 100lvh)",
 				borderRadius: "0",
 			});
 
@@ -86,8 +86,8 @@ export default function Home() {
 				},
 				top: "0",
 				left: "0",
-				width: "min(85dvh, 85dvw)",
-				height: "min(85dvh, 85dvw)",
+				width: "min(85lvh, 85lvw)",
+				height: "min(85lvh, 85lvw)",
 				borderRadius: "1000px",
 			});
 
@@ -102,8 +102,8 @@ export default function Home() {
 				},
 				top: "0",
 				left: "0",
-				width: "min(100dvw, 100dvw)",
-				height: "min(100dvh, 100dvh)",
+				width: "min(100lvw, 100lvw)",
+				height: "min(100lvh, 100lvh)",
 				borderRadius: "0",
 			});
 		}, 50);
