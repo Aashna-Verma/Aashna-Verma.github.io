@@ -21,92 +21,7 @@ export default function Home() {
 		// 	zIndex: -1
 		// });
 
-		gsap.registerPlugin(ScrollTrigger);
-
-		setTimeout(() => {
-			new SplitType(".line-popup", { types: "lines", lineClass: "clipy-line-popup clipy" });
-			new SplitType(".clipy-line-popup ", { types: "lines", lineClass: "upsie" });
-
-			var upsies = document.querySelectorAll(".upsie, .project-popup");
-			
-			upsies.forEach((upsie) => {
-				gsap.timeline({
-					scrollTrigger: {
-						trigger: upsie,
-						start: "top bottom",
-						end: "25% bottom",
-						scrub: true,
-						markers: false,
-					},
-				}).to(upsie, {
-					y: 0,
-				});
-			});
-
-			gsap.from("#gradient", {
-				lazy: false,
-				scrollTrigger: {
-					trigger: "#home-contact",
-					start: "85% 30%",
-					end: "60% 30%",
-					markers: false,
-					scrub: true,
-				},
-				top: "50lvh",
-				left: "0",
-				width: "min(90lvw, 90lvw)",
-				height: "min(100lvh, 100lvh)",
-				borderRadius: "1000px 1000px 0 0",
-			});
-
-			gsap.from("#gradient", {
-				lazy: false,
-				scrollTrigger: {
-					trigger: "#home-projects",
-					start: "60% 30%",
-					end: "85% 30%",
-					markers: false,
-					scrub: true,
-				},
-				top: "0",
-				left: "calc(-30% + 10px)",
-				width: "min(40lvw, 40lvw)",
-				height: "min(100lvh, 100lvh)",
-				borderRadius: "0",
-			});
-
-			gsap.from("#gradient", {
-				lazy: false,
-				scrollTrigger: {
-					trigger: "#home-about",
-					start: "30% 30%",
-					end: "85% 30%%",
-					markers: false,
-					scrub: true,
-				},
-				top: "0",
-				left: "0",
-				width: "min(85lvh, 85lvw)",
-				height: "min(85lvh, 85lvw)",
-				borderRadius: "1000px",
-			});
-
-			gsap.from("#gradient", {
-				lazy: false,
-				scrollTrigger: {
-					trigger: "#home-intro",
-					start: "40% 30%",
-					end: "80% 30%%",
-					markers: false,
-					scrub: true,
-				},
-				top: "0",
-				left: "0",
-				width: "min(100lvw, 100lvw)",
-				height: "min(100lvh, 100lvh)",
-				borderRadius: "0",
-			});
-		}, 50);
+		window.addEventListener("load", ScrollAnimate);
 	});
 
 	const copyEmail = (e) => {
@@ -314,3 +229,90 @@ const _projects = [
 		tools: [ICON["Java"], ICON["JUnit"]],
 	},
 ];
+
+const ScrollAnimate = () => {
+	gsap.registerPlugin(ScrollTrigger);
+
+	new SplitType(".line-popup", { types: "lines", lineClass: "clipy-line-popup clipy" });
+	new SplitType(".clipy-line-popup ", { types: "lines", lineClass: "upsie" });
+
+	var upsies = document.querySelectorAll(".upsie, .project-popup");
+
+	upsies.forEach((upsie) => {
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: upsie,
+				start: "top bottom",
+				end: "25% bottom",
+				scrub: true,
+				markers: false,
+			},
+		}).to(upsie, {
+			y: 0,
+		});
+	});
+
+	gsap.from("#gradient", {
+		lazy: false,
+		scrollTrigger: {
+			trigger: "#home-contact",
+			start: "85% 30%",
+			end: "60% 30%",
+			markers: false,
+			scrub: true,
+		},
+		top: "50lvh",
+		left: "0",
+		width: "min(90lvw, 90lvw)",
+		height: "min(100lvh, 100lvh)",
+		borderRadius: "1000px 1000px 0 0",
+	});
+
+	gsap.from("#gradient", {
+		lazy: false,
+		scrollTrigger: {
+			trigger: "#home-projects",
+			start: "60% 30%",
+			end: "85% 30%",
+			markers: false,
+			scrub: true,
+		},
+		top: "0",
+		left: "calc(-30% + 10px)",
+		width: "min(40lvw, 40lvw)",
+		height: "min(100lvh, 100lvh)",
+		borderRadius: "0",
+	});
+
+	gsap.from("#gradient", {
+		lazy: false,
+		scrollTrigger: {
+			trigger: "#home-about",
+			start: "30% 30%",
+			end: "85% 30%%",
+			markers: false,
+			scrub: true,
+		},
+		top: "0",
+		left: "0",
+		width: "min(85lvh, 85lvw)",
+		height: "min(85lvh, 85lvw)",
+		borderRadius: "1000px",
+	});
+
+	gsap.from("#gradient", {
+		lazy: false,
+		scrollTrigger: {
+			trigger: "#home-intro",
+			start: "40% 30%",
+			end: "80% 30%%",
+			markers: false,
+			scrub: true,
+		},
+		top: "0",
+		left: "0",
+		width: "min(100lvw, 100lvw)",
+		height: "min(100lvh, 100lvh)",
+		borderRadius: "0",
+	});
+};
