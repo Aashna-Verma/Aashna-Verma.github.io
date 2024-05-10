@@ -18,7 +18,7 @@ export default function Project({ img, title, tags, links, tools }) {
 									onClick={() => window.open(link, "_blank")}
 								>
 									<span>{tag}</span>
-									<img src={arrow} alt="" />
+									<img src={arrow} alt="arrow" />
 								</button>
 						  ))
 						: null}

@@ -1,5 +1,5 @@
 import './Background.scss';
-import gradient from '../assets/gradient.png';
+import gradient from '../assets/gradient.webp';
 import { useEffect } from 'react';
 import '../asset/grained';
 
@@ -16,7 +16,7 @@ export default function Background() {
     return (
         <div id='background'>
             <div id='grained'></div>
-            <img id='gradient' src={gradient} />
+            <img id='gradient' src={gradient} alt="background gradient" />
         </div>
     );
 }

@@ -68,7 +68,7 @@ function Nav() {
         <div id='Nav'>
             <div className='nav-left'>
                 <Link className='nav-name' to='/'>
-                    <img src={favicon} />Aashna Verma
+                    <img src={favicon} alt="logo" />Aashna Verma
                 </Link>
             </div>
 

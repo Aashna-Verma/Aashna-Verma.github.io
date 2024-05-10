@@ -33,7 +33,7 @@ export default function Hero({ className }) {
                 <div className='clipy intro-name'>VERMA</div>
             </div>
             <div className='intro-sparkle'>
-                <img className='sparkle' src={sparkle} />
+                <img className='sparkle' src={sparkle} alt="sparkle"/>
             </div>
         </div>
     );

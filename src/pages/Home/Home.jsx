@@ -73,8 +73,8 @@ export default function Home() {
 			},
 			top: '50%',
 			left: '0',
-			width: '90vw',
-			height: '100vh',
+			width: 'min(90vw, 90vw)',
+			height: 'min(100vh, 100vh)',
 			borderRadius: '1000px 1000px 0 0',
 		});
 
@@ -90,8 +90,8 @@ export default function Home() {
 			},
 			top: '0',
 			left: 'calc(-30% + 10px)',
-			width: '40vw',
-			height: '100vh',
+			width: 'min(40vw, 40vw)',
+			height: 'min(100vh, 100vh)',
 			borderRadius: '0',
 		});
 
@@ -106,8 +106,8 @@ export default function Home() {
 			},
 			top: '0',
 			left: '0',
-			width: '85vh',
-			height: '85vh',
+			width: 'min(85vh, 85vw)',
+			height: 'min(85vh, 85vw)',
 			borderRadius: '1000px',
 		});
 
@@ -122,8 +122,8 @@ export default function Home() {
 			},
 			top: '0',
 			left: '0',
-			width: '100vw',
-			height: '100vh',
+			width: 'min(100vw, 100vw)',
+			height: 'min(100vh, 100vh)',
 			borderRadius: '0',
 		});
 
