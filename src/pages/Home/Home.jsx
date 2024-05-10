@@ -27,7 +27,7 @@ export default function Home() {
 			new SplitType(".line-popup", { types: "lines", lineClass: "clipy-line-popup clipy" });
 			new SplitType(".clipy-line-popup ", { types: "lines", lineClass: "upsie" });
 
-			var upsies = document.querySelectorAll(".upsie, .project-popup");
+			var upsies = document.querySelectorAll(".upsie");
 			
 			upsies.forEach((upsie) => {
 				gsap.timeline({
@@ -42,9 +42,26 @@ export default function Home() {
 					y: 0,
 				});
 			});
-		}, 50);
+
+			
+		}, 20);
 
 		setTimeout(() => {
+			var projects = document.querySelectorAll(".project-popup");
+			projects.forEach((upsie) => {
+				gsap.timeline({
+					scrollTrigger: {
+						trigger: upsie,
+						start: "top bottom",
+						end: "+=80 bottom",
+						scrub: true,
+						markers: false,
+					},
+				}).to(upsie, {
+					y: 0,
+				});
+			});
+
 			gsap.from("#gradient", {
 				lazy: false,
 				scrollTrigger: {
