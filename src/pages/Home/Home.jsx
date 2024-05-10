@@ -34,7 +34,7 @@ export default function Home() {
 					scrollTrigger: {
 						trigger: upsie,
 						start: "top bottom",
-						end: "+=100 bottom",
+						end: "25% bottom",
 						scrub: true,
 						markers: false,
 					},
