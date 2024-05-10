@@ -48,11 +48,11 @@ export default function Home() {
 				scrollTrigger: {
 					trigger: "#home-contact",
 					start: "85% 30%",
-					end: "60% 30%%",
+					end: "60% 30%",
 					markers: false,
 					scrub: true,
 				},
-				top: "50%",
+				top: "50lvh",
 				left: "0",
 				width: "min(90lvw, 90lvw)",
 				height: "min(100lvh, 100lvh)",
@@ -64,7 +64,7 @@ export default function Home() {
 				scrollTrigger: {
 					trigger: "#home-projects",
 					start: "60% 30%",
-					end: "85% 30%%",
+					end: "85% 30%",
 					markers: false,
 					scrub: true,
 				},
