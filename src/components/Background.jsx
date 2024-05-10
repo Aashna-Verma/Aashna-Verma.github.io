@@ -1,5 +1,5 @@
 import './Background.scss';
-import gradient from '../assets/gradient.webp';
+import gradient from '../assets/gradient.svg';
 import { useEffect } from 'react';
 import '../asset/grained';
 
