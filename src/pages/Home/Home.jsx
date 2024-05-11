@@ -34,7 +34,7 @@ export default function Home() {
 					scrollTrigger: {
 						trigger: upsie,
 						start: "top bottom",
-						end: "25% bottom",
+						end: "+=50 bottom",
 						scrub: true,
 						markers: false,
 					},
@@ -44,7 +44,7 @@ export default function Home() {
 			});
 
 			
-		}, 20);
+		}, 50);
 
 		setTimeout(() => {
 			var projects = document.querySelectorAll(".project-popup");

@@ -1,8 +1,13 @@
-# React + Vite
+# ✨My Personal Website 
+Hello! This is my personal [website](https://aashna-verma.github.io/), it's still undercostruction so please visit again soon!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tools
+
+[React](https://react.dev/) 
+| [Vite](https://vitejs.dev/) 
+| [GSAP](https://gsap.com/) 
+| [Lenis](https://lenis.darkroom.engineering/) 
+| [Grained.js](https://github.com/sarathsaleem/grained) 
+| [Sparkle](https://codepen.io/lucasdellabella/pen/RwMyzRd)
