@@ -173,6 +173,7 @@ export default function Home() {
 					<button className="upsie" id="my-email" onClick={copyEmail}>
 						aashna.verma@outlook.com
 					</button>
+					<div className="psst upsie">pssstttt click on me ^</div>
 					<div className="contact-icons upsie">
 						{contacts.map((item) => {
 							return (
@@ -321,8 +322,8 @@ const _projects = [
 	{
 		img: cuHacking_img,
 		title: "cuHacking",
-		tags: ["Live link comming soon!", "FrontEnd", "UI/UX", "BackEnd"],
-		links: [["Github", "https://github.com/Isabella-Nguyen/ColourMe"]],
+		tags: ["FrontEnd", "UI/UX", "BackEnd"],
+		links: [["Live Link", "https://www.cuhacking.ca/"]],
 		tools: [ICON["React"], ICON["NodeJS"], ICON["Figma"], ICON["Tailwind"], ICON["ViteJS"]],
 	},
 	{
