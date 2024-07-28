@@ -13,10 +13,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Home() {
 	useEffect(() => {
+		const googleInsightsId = import.meta.env.VITE_GOOGLE_INSIGHTS_ID;
 		// Inject the GTM script
 		const gtmScript = document.createElement("script");
 		gtmScript.async = true;
-		gtmScript.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GOOGLEINSIGHTS}`;
+		gtmScript.src = `https://www.googletagmanager.com/gtag/js?id=${googleInsightsId}`;
 		document.head.appendChild(gtmScript);
 
 		// Initialize the dataLayer and gtag function
@@ -25,7 +26,7 @@ export default function Home() {
 			dataLayer.push(arguments);
 		}
 		gtag("js", new Date());
-		gtag("config", process.env.REACT_APP_GOOGLEINSIGHTS);
+		gtag("config", googleInsightsId);
 
 		gsap.registerPlugin(ScrollTrigger);
 
