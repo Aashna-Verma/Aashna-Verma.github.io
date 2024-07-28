@@ -13,13 +13,19 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Home() {
 	useEffect(() => {
-		// console.log('mounted');
-		// gsap.to('.block', {
-		// 	opacity: 0,
-		// 	duration: 1.5,
-		// 	delay: 1,
-		// 	zIndex: -1
-		// });
+		// Inject the GTM script
+		const gtmScript = document.createElement("script");
+		gtmScript.async = true;
+		gtmScript.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GOOGLEINSIGHTS}`;
+		document.head.appendChild(gtmScript);
+
+		// Initialize the dataLayer and gtag function
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+		gtag("config", process.env.REACT_APP_GOOGLEINSIGHTS);
 
 		gsap.registerPlugin(ScrollTrigger);
 
@@ -28,38 +34,40 @@ export default function Home() {
 			new SplitType(".clipy-line-popup ", { types: "lines", lineClass: "upsie" });
 
 			var upsies = document.querySelectorAll(".upsie");
-			
-			upsies.forEach((upsie) => {
-				gsap.timeline({
-					scrollTrigger: {
-						trigger: upsie,
-						start: "top bottom",
-						end: "+=50 bottom",
-						scrub: true,
-						markers: false,
-					},
-				}).to(upsie, {
-					y: 0,
-				});
-			});
 
-			
+			upsies.forEach((upsie) => {
+				gsap
+					.timeline({
+						scrollTrigger: {
+							trigger: upsie,
+							start: "top bottom",
+							end: "+=50 bottom",
+							scrub: true,
+							markers: false,
+						},
+					})
+					.to(upsie, {
+						y: 0,
+					});
+			});
 		}, 50);
 
 		setTimeout(() => {
 			var projects = document.querySelectorAll(".project-popup");
 			projects.forEach((upsie) => {
-				gsap.timeline({
-					scrollTrigger: {
-						trigger: upsie,
-						start: "top bottom",
-						end: "+=80 bottom",
-						scrub: true,
-						markers: false,
-					},
-				}).to(upsie, {
-					y: 0,
-				});
+				gsap
+					.timeline({
+						scrollTrigger: {
+							trigger: upsie,
+							start: "top bottom",
+							end: "+=80 bottom",
+							scrub: true,
+							markers: false,
+						},
+					})
+					.to(upsie, {
+						y: 0,
+					});
 			});
 
 			gsap.from("#gradient", {
