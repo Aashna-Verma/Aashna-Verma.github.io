@@ -15,6 +15,7 @@
     position: relative;
     width: 100lvw;
     height: 100lvh;
+    will-change: transform;
 }
 
 #background::before{
