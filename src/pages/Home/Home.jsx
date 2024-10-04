@@ -70,71 +70,84 @@ export default function Home() {
 						y: 0,
 					});
 			});
-
-			gsap.from("#gradient", {
-				lazy: false,
-				scrollTrigger: {
-					trigger: "#home-contact",
-					start: "85% 30%",
-					end: "60% 30%",
-					markers: false,
-					scrub: true,
-				},
-				top: "50lvh",
-				left: "0",
-				width: "min(90lvw, 90lvw)",
-				height: "min(100lvh, 100lvh)",
-				borderRadius: "1000px 1000px 0 0",
-			});
-
-			gsap.from("#gradient", {
-				lazy: false,
-				scrollTrigger: {
-					trigger: "#home-projects",
-					start: "60% 30%",
-					end: "85% 30%",
-					markers: false,
-					scrub: true,
-				},
-				top: "0",
-				left: "calc(-30% + 10px)",
-				width: "min(40lvw, 40lvw)",
-				height: "min(100lvh, 100lvh)",
-				borderRadius: "0",
-			});
-
-			gsap.from("#gradient", {
-				lazy: false,
-				scrollTrigger: {
-					trigger: "#home-about",
-					start: "30% 30%",
-					end: "85% 30%%",
-					markers: false,
-					scrub: true,
-				},
-				top: "0",
-				left: "0",
-				width: "min(85lvh, 85lvw)",
-				height: "min(85lvh, 85lvw)",
-				borderRadius: "1000px",
-			});
-
-			gsap.from("#gradient", {
-				lazy: false,
-				scrollTrigger: {
-					trigger: "#home-intro",
-					start: "40% 30%",
-					end: "80% 30%%",
-					markers: false,
-					scrub: true,
-				},
-				top: "0",
-				left: "0",
-				width: "min(100lvw, 100lvw)",
-				height: "min(100lvh, 100lvh)",
-				borderRadius: "0",
-			});
 		}, 200);
+
+		gsap.set("#gradient", {
+			width: "100vw",
+			height: "100vh",
+			borderRadius: "0",
+			transform: "translate(0, 0)",
+		});
+
+		// Create a paused timeline for #gradient
+		const tl = gsap.timeline({ paused: true });
+
+		// Define the animations as segments of the timeline for each section
+		tl.to("#gradient", {
+			width: "100vw",
+			height: "100lvh",
+			borderRadius: "0",
+			duration: 0,
+			ease: "none",
+		});
+		tl.to("#gradient", {
+			width: () => Math.min(window.innerHeight * 0.8, window.innerWidth * 0.8) + "px", // Set the smaller dimension (either 80vh or 80vw) as a fixed value
+			height: () => Math.min(window.innerHeight * 0.8, window.innerWidth * 0.8) + "px", // Maintain equal height to create a circle
+			borderRadius: "1000px",
+			duration: 1,
+		})
+			.to("#gradient", {
+				left: "calc(-25vw + 1vw)",
+				height: "100lvh",
+				width: "50vw",
+				borderRadius: "0",
+				duration: 1,
+			})
+			.to("#gradient", {
+				left: "auto",
+				width: "100vw",
+				transform: "translateY(50lvh)",
+				borderRadius: "1000px 1000px 0 0",
+				duration: 1, // Duration for a smooth transition
+			})
+			.to("#gradient", {
+				transform: "scale(1)",
+				borderRadius: "0",
+				duration: 1,
+			});
+
+		// Create individual ScrollTriggers to control each section
+		ScrollTrigger.create({
+			animation: tl.tweenTo(1), // Play the timeline to the first segment's end
+			trigger: "#home-intro",
+			start: "40% 30%",
+			end: "60% 30%",
+			scrub: true,
+		});
+
+		ScrollTrigger.create({
+			animation: tl.tweenTo(2), // Play the timeline to the second segment's end
+			trigger: "#home-about",
+			start: "30% 30%",
+			end: "85% 30%",
+			scrub: true,
+		});
+
+		ScrollTrigger.create({
+			animation: tl.tweenTo(3), // Play the timeline to the third segment's end
+			trigger: "#home-projects",
+			start: "60% 30%",
+			end: "85% 30%",
+			scrub: true,
+		});
+
+		ScrollTrigger.create({
+			animation: tl.tweenTo(4), // Play the timeline to the fourth segment's end
+			trigger: "#home-contact",
+			start: "85% 30%",
+			end: "100% 30%",
+			scrub: true,
+		});
 	});
 
 	const copyEmail = (e) => {

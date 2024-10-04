@@ -2,7 +2,7 @@
 :root {
 	--text-primary: #F8F7F4;
 	--surface-primary: #221611;
-	--surface-blur: rgb(34, 22, 17, 0.001);
+	--surface-blur: rgba(34, 22, 17, 0.05);
 	--accent: #ba3404a4;
 	
 	--beige: #e7e0d8;
