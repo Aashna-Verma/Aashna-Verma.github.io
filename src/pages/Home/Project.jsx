@@ -1,5 +1,6 @@
 import "./Project.scss";
 import arrow from "../../assets/arrow.svg";
+import { Link } from "react-router-dom";
 
 export default function Project({ img, title, tags, links, tools }) {
 	return (
@@ -12,14 +13,10 @@ export default function Project({ img, title, tags, links, tools }) {
 				<div>
 					{links
 						? links.map(([tag, link], index) => (
-								<button
-									key={index}
-									className="project-tag arrow"
-									onClick={() => window.open(link, "_blank")}
-								>
+								<Link key={index} className="project-tag arrow" to={link} target="_blank">
 									<span>{tag}</span>
 									<img src={arrow} alt="arrow" />
-								</button>
+								</Link>
 						  ))
 						: null}
 

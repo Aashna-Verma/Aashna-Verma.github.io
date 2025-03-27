@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { useEffect } from "react";
 import SplitType from "split-type";
 import cuHacking_img from "../../assets/project_home/cuHacking.png";
+import apption_img from "../../assets/project_home/apption.png";
 import unoFlip_img from "../../assets/project_home/unoFlip.png";
 import { Tooltip } from "react-tooltip";
 import { makeBurst } from "../../asset/spark";
@@ -325,9 +326,26 @@ const ICON = {
 		icon: "devicon-linkedin-plain",
 		href: "https://www.linkedin.com/in/aashna-verma-000",
 	},
+	Nextjs: {
+		tooltip: "Next JS",
+		icon: "devicon-nextjs-plain",
+		href: "https://nextjs.org/",
+	},
+	Storybook: {
+		tooltip: "Storybook",
+		icon: "devicon-storybook-plain",
+		href: "https://storybook.js.org/",
+	},
 };
 
-const _technologies = [ICON["NodeJS"], ICON["React"], ICON["Blazor"], ICON["Git"]];
+const _technologies = [
+	ICON["NodeJS"],
+	ICON["React"],
+	ICON["Blazor"],
+	ICON["Git"],
+	ICON["Nextjs"],
+	ICON["Storybook"],
+];
 const _languages = [
 	ICON["Java"],
 	ICON["C#"],
@@ -344,9 +362,24 @@ const _projects = [
 	{
 		img: cuHacking_img,
 		title: "cuHacking",
-		tags: ["FrontEnd", "UI/UX", "BackEnd"],
-		links: [["Live Link", "https://www.cuhacking.ca/"]],
-		tools: [ICON["React"], ICON["NodeJS"], ICON["Figma"], ICON["Tailwind"], ICON["ViteJS"]],
+		tags: ["UX Reseach", "Design System", "UI", "Branding", "FrontEnd", "CMS"],
+		links: [
+			["Website", "https://cuhacking.ca/"],
+			["Portal", "https://portal.cuhacking.ca/"],
+			[
+				"Figma",
+				"https://www.figma.com/design/wc1JOWR48tBNkjcjwY3AzB/%E2%8C%A8%EF%B8%8F-cuHacking-Design-System?node-id=1512-3204&t=aOMNy0KT02qD4MhD-1",
+			],
+			["Github", "https://github.com/cuhacking/2025"],
+		],
+		tools: [ICON["React"], ICON["Figma"], ICON["Tailwind"], ICON["Storybook"]],
+	},
+	{
+		img: apption_img,
+		title: "Apption Website",
+		tags: ["FrontEnd", "CMS"],
+		links: [["Website", "https://apption.com/"]],
+		tools: [ICON["Nextjs"], ICON["Figma"], ICON["Tailwind"]],
 	},
 	{
 		img: unoFlip_img,

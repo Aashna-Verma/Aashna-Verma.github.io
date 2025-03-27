@@ -9,29 +9,26 @@
 }
 
 .nav-left,
-.nav-right{
+.nav-right {
     background-color: var(--surface-blur);
-    backdrop-filter:blur(10px);
+    backdrop-filter: blur(10px);
     height: 100%;
+
+    border-radius: 0.5em;
+    margin: 5px 10px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     * {
-    color: var(--text-primary);
-    text-decoration: none;
-    font-size: 18px;
+        color: var(--text-primary);
+        text-decoration: none;
+        font-size: 18px;
     }
 }
 
-.nav-left{
-    border-bottom-right-radius: 1.5em;
-}
 
-.nav-right{
-    border-bottom-left-radius: 1.5em;
-}
 
 .nav-name,
 .nav-link {
@@ -41,7 +38,7 @@
 .underline {
     display: block;
     position: relative;
-    top:0;
+    top: 0;
     left: 0;
     width: 0;
     height: 2px;

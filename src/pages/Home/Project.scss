@@ -30,16 +30,29 @@
 		}
 
 		.project-tag {
+			background-color: var(--surface-blur);
+			border: 1px solid var(--surface-blur-2);
+			backdrop-filter: blur(10px);
 			display: inline-flex;
 			align-items: center;
-			border: 2px solid var(--text-primary);
+
 			margin: 0.5em;
 			padding: 0.25em 0.75em;
 			border-radius: 30px;
+			transition: scale 0.25s ease-in-out;
 
 			span {
-				padding-top: 0.2em;
+				padding-top: 0em;
 			}
+		}
+
+		.project-tag:has(img) {
+			border: 1px solid var(--text-primary);
+		}
+
+		.project-tag:has(img):hover {
+			scale: 1.1;
+			transition: scale 0.25s ease-in-out;
 		}
 
 		.arrow {
@@ -95,6 +108,7 @@
 				height: auto;
 			}
 		}
+
 		.project-info {
 			margin: 0em 0em 3em 0em;
 			position: relative;
