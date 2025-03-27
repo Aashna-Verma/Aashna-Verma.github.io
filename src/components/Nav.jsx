@@ -111,12 +111,7 @@ function Nav() {
 					<span className="underline"></span>
 				</span>
 				<span className="nav-link">
-					<Link
-						to="https://aashna-verma.notion.site/Aashna-s-Portfolio-19aefb6404cc809fbd0bdc524e4bdfad"
-						target="_blank"
-					>
-						./portfolio
-					</Link>
+					<Link to="/portfolio">./portfolio</Link>
 					<span className="underline"></span>
 				</span>
 				<span className="nav-link">

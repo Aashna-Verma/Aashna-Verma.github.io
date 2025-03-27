@@ -15,6 +15,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default function Home() {
 	useEffect(() => {
 		const googleInsightsId = import.meta.env.VITE_GOOGLE_INSIGHTS_ID;
+
 		// Inject the GTM script
 		const gtmScript = document.createElement("script");
 		gtmScript.async = true;

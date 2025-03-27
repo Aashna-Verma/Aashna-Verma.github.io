@@ -4,7 +4,7 @@ import React, { useEffect, useState, Suspense } from "react";
 import Nav from "./components/Nav";
 import Background from "./components/Background";
 import Home from "./pages/Home/Home";
-// import Art from './pages/Art';
+import Portfolio from "./pages/Portfolio/Portfolio";
 // import Projects from './pages/Projects';
 // import Contact from './pages/Contact';
 // import Inspiration from './pages/Inspiration';
@@ -58,8 +58,9 @@ function App() {
 			<Background />
 			<Nav />
 			<Routes>
-				<Route path="/" element={<Home />} />
-				{/* <Route path='/art' element={<Art />} />
+				<Route path="*" element={<Home />} />
+				<Route path="/portfolio" element={<Portfolio />} />
+				{/*<Route path="/" element={<Home />} />
 				<Route path='/projects' element={<Projects />} />
 				<Route path='/contact' element={<Contact />} />
 				<Route path='/inspiration' element={<Inspiration />} /> */}
